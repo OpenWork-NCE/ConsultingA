@@ -126,22 +126,140 @@
       "obligations-fiscales-2026": {
         "date": "15 de febrero de 2026",
         "category": "Fiscalidad",
+        "readingTime": "8 min de lectura",
         "title": "Nuevas obligaciones fiscales para las empresas en España 2026",
-        "excerpt": "El gobierno español ha introducido nuevas obligaciones declarativas para las empresas que operan en territorio nacional. Repaso de los principales cambios."
+        "excerpt": "El gobierno español ha introducido nuevas obligaciones declarativas para las empresas que operan en territorio nacional. Repaso de los principales cambios.",
+        "lede": "El legislador español ha confirmado en 2026 varias evoluciones estructurales en materia de facturación, declaraciones y fiscalidad internacional. Para las direcciones financieras y jurídicas de empresas que operan en España, varios proyectos de adecuación deben anticiparse sin demora.",
+        "body": [
+          {
+            "heading": "El despliegue progresivo de la facturación electrónica B2B",
+            "paragraphs": [
+              "La ley 18/2022, conocida como Crea y Crece, y sus reales decretos de desarrollo imponen ahora la emisión y la recepción de facturas electrónicas entre empresas españolas. El calendario de implantación se escalona en función de la cifra de negocios: las empresas cuya facturación anual supera los ocho millones de euros se ven afectadas en primer lugar, las demás disponen de un periodo transitorio.",
+              "En la práctica, cada factura deberá transitar por una plataforma acreditada y respetar un formato estructurado (Facturae o equivalente europeo). Las empresas deben anticipar la elección de su proveedor, la integración con su ERP y la formación de sus equipos contables — de lo contrario, son previsibles rupturas operativas en la cadena cliente-proveedor."
+            ]
+          },
+          {
+            "heading": "Evolución del SII (Suministro Inmediato de Información)",
+            "paragraphs": [
+              "El SII, dispositivo de transmisión inmediata de los registros del IVA a la Agencia Tributaria, ve su ámbito de aplicación progresivamente ampliado. Los umbrales de cifra de negocios que activan la obligación se revisan periódicamente a la baja, y los controles automatizados de coherencia entre declaraciones del IVA y registros SII se han intensificado.",
+              "Las desviaciones detectadas pueden ahora desencadenar rápidamente un procedimiento de verificación dirigido, sin pasar necesariamente por una notificación previa de rutina. Para las empresas sometidas a la obligación, la llevanza irreprochable de los registros se convierte en un asunto de gestión del riesgo, no solo de cumplimiento."
+            ]
+          },
+          {
+            "heading": "El impuesto mínimo global y su despliegue nacional",
+            "paragraphs": [
+              "La transposición de la directiva europea 2022/2523, derivada del Pilar 2 de la OCDE, introduce en España un impuesto complementario del quince por ciento sobre los grupos multinacionales cuya cifra de negocios consolidada supera los 750 millones de euros. Las primeras declaraciones cubren los ejercicios iniciados a partir del 31 de diciembre de 2023, con obligaciones reforzadas en 2026.",
+              "Para las filiales y sucursales españolas de grupos internacionales, la coordinación entre la matriz y las entidades locales se convierte en un punto de atención mayor: los cálculos del ETR (tipo efectivo de imposición) se realizan a escala jurisdiccional y requieren un flujo de información preciso y armonizado."
+            ]
+          },
+          {
+            "heading": "Recomendaciones prácticas",
+            "paragraphs": [
+              "Tres acciones concretas merecen planificarse sin demora:"
+            ],
+            "list": [
+              "Cartografiar los flujos de facturación B2B para identificar los proyectos de adecuación prioritarios.",
+              "Auditar la coherencia entre los registros SII y las declaraciones del IVA de los tres últimos ejercicios.",
+              "Para los grupos internacionales, organizar un alineamiento con la fiscalidad de la matriz para anticipar el cálculo del impuesto complementario."
+            ]
+          }
+        ]
       },
       "implantation-pme-andalousie": {
         "date": "20 de enero de 2026",
         "category": "PYMES francófonas",
+        "readingTime": "10 min de lectura",
         "title": "Guía práctica: implantación de una PYME francesa en Andalucía",
-        "excerpt": "Las etapas clave y los puntos críticos para implantar con éxito su PYME en Andalucía. Aspectos fiscales, jurídicos y administrativos."
+        "excerpt": "Las etapas clave y los puntos críticos para implantar con éxito su PYME en Andalucía. Aspectos fiscales, jurídicos y administrativos.",
+        "lede": "Andalucía se ha convertido, en los últimos años, en un destino privilegiado para las PYMES francesas que desean desarrollar una actividad en España. Más allá del marco de vida atractivo, la región ofrece un entorno administrativo y fiscal favorable. He aquí las etapas clave y los puntos de vigilancia para implantarse con éxito.",
+        "body": [
+          {
+            "heading": "Elegir la estructura jurídica adecuada",
+            "paragraphs": [
+              "Tres opciones dominan para una PYME francesa: la Sociedad Limitada (SL), equivalente a la SARL con un capital social mínimo de un euro desde la ley Crea y Crece; el estatuto de autónomo para los empresarios individuales; y la sucursal, que mantiene una dependencia jurídica con la sociedad matriz francesa.",
+              "La elección depende de los objetivos: implantación autónoma con patrimonio separado, simple oficina de representación, o actividad dependiente de la sede. Cada opción conlleva consecuencias fiscales y sociales específicas que conviene arbitrar previamente, teniendo en cuenta el modelo económico y las perspectivas de crecimiento."
+            ]
+          },
+          {
+            "heading": "Las etapas administrativas imprescindibles",
+            "paragraphs": [
+              "La implantación comienza con la obtención de un NIE (Número de Identificación de Extranjero) para cada socio no residente. A continuación viene la reserva de la denominación social ante el Registro Mercantil Central, y la apertura de una cuenta bancaria para el depósito del capital.",
+              "Los estatutos se firman ante notario, la inscripción en el Registro Mercantil de la provincia correspondiente formaliza la creación, y la obtención del NIF (Número de Identificación Fiscal) ante la Agencia Tributaria concluye el recorrido inicial. El plazo global suele estar comprendido entre cuatro y ocho semanas, según la provincia y la complejidad del expediente."
+            ]
+          },
+          {
+            "heading": "El marco fiscal aplicable",
+            "paragraphs": [
+              "Las sociedades españolas están sujetas al Impuesto sobre Sociedades, cuyo tipo nominal general es del veinticinco por ciento. Las empresas de nueva creación se benefician de un tipo reducido del quince por ciento durante los dos primeros ejercicios con beneficios, sujeto a condiciones que deben verificarse caso por caso.",
+              "El IVA español sigue un régimen de tres tipos principales (4 %, 10 %, 21 %) e impone una declaración mensual o trimestral según el tamaño. Para los flujos intracomunitarios entre Francia y España, la inscripción en el registro VIES es indispensable y condiciona la aplicación del régimen de inversión del sujeto pasivo."
+            ]
+          },
+          {
+            "heading": "Los errores frecuentes que conviene evitar",
+            "paragraphs": [
+              "Cuatro puntos de vigilancia se repiten en la mayoría de los expedientes de implantación:"
+            ],
+            "list": [
+              "La residencia fiscal del directivo: un directivo que pasa más de 183 días al año en España se convierte en residente fiscal español, con consecuencias personales importantes sobre la renta y el patrimonio.",
+              "La doble imposición: el convenio franco-español existe pero su aplicación requiere un seguimiento riguroso y la aportación de los certificados de residencia adecuados.",
+              "El calendario del IVA: las primeras declaraciones presentan a menudo errores en las retenciones y las regularizaciones anuales.",
+              "Los convenios colectivos sectoriales españoles: se aplican automáticamente e imponen obligaciones en materia de salario mínimo, vacaciones y representación de los trabajadores."
+            ]
+          }
+        ]
       },
       "reforme-droit-societes": {
         "date": "5 de enero de 2026",
         "category": "Jurídico",
+        "readingTime": "7 min de lectura",
         "title": "Reforma del derecho societario español: lo que cambia",
-        "excerpt": "Análisis de las modificaciones introducidas en el derecho societario español y sus implicaciones para las empresas extranjeras."
+        "excerpt": "Análisis de las modificaciones introducidas en el derecho societario español y sus implicaciones para las empresas extranjeras.",
+        "lede": "Varios textos adoptados en los últimos meses modernizan el derecho societario español. Más allá de los ajustes técnicos, estas evoluciones traducen una voluntad de adaptar las estructuras jurídicas a las prácticas digitales y a las exigencias europeas de transparencia. Análisis para los directivos extranjeros y los grupos internacionales.",
+        "body": [
+          {
+            "heading": "La generalización de las juntas telemáticas",
+            "paragraphs": [
+              "La ley 11/2023 ha confirmado la posibilidad de celebrar juntas generales íntegramente a distancia, sin necesidad de una reunión física previa. Los estatutos deben sin embargo prever explícitamente esta modalidad; en su defecto, se requiere una modificación estatutaria.",
+              "Esta evolución facilita el gobierno corporativo de las sociedades con accionariado internacional, reduciendo los costes y plazos vinculados a la celebración física de las juntas en España. Impone en contrapartida una vigilancia particular sobre las condiciones de quórum, la autenticación de los votos electrónicos y la trazabilidad de las deliberaciones."
+            ]
+          },
+          {
+            "heading": "Los deberes reforzados de los administradores",
+            "paragraphs": [
+              "El deber de diligencia y el deber de lealtad se han precisado, en particular sobre la prevención de los conflictos de interés y la explotación de oportunidades de negocio. La jurisprudencia reciente del Tribunal Supremo ha confirmado la aplicación estricta de estas obligaciones, incluso para los administradores no residentes que no participan activamente en la gestión cotidiana.",
+              "Para los grupos internacionales, la cartografía de los mandatos y la formalización sistemática de las decisiones de inversión se convierten en herramientas defensivas esenciales en caso de litigio entre socios o de cuestionamiento por parte de las autoridades."
+            ]
+          },
+          {
+            "heading": "El régimen de las sociedades extranjeras y la transparencia UBO",
+            "paragraphs": [
+              "Las obligaciones de transparencia que pesan sobre las sociedades que operan en España se han reforzado: declaración del titular real, identificación de las estructuras de tenencia, alineación con los estándares UBO europeos derivados de la 5ª directiva contra el blanqueo. Toda modificación del accionariado o de la dirección debe comunicarse ahora en plazos cortos.",
+              "El Registro de Titularidades Reales centraliza esta información y su acceso por las autoridades competentes se ha facilitado. Las sociedades que no han actualizado sus declaraciones se exponen a sanciones administrativas y a restricciones de funcionamiento, en particular la imposibilidad de realizar ciertas formalidades en el Registro Mercantil."
+            ]
+          },
+          {
+            "heading": "Implicaciones prácticas para los directivos extranjeros",
+            "paragraphs": [
+              "Cuatro acciones merecen emprenderse en los próximos meses:"
+            ],
+            "list": [
+              "Verificar que los estatutos permiten las juntas telemáticas, y en su caso iniciar una modificación estatutaria antes de la próxima junta general.",
+              "Documentar formalmente las decisiones de inversión y las autorizaciones de operaciones susceptibles de generar un conflicto de interés.",
+              "Actualizar las declaraciones de titulares reales ante el Registro de Titularidades Reales.",
+              "Formar a los administradores no residentes sobre las obligaciones específicas del derecho societario español."
+            ]
+          }
+        ]
       }
     }
+  },
+  "Article": {
+    "backToList": "Toda la actualidad",
+    "publishedOn": "Publicado el",
+    "relatedEyebrow": "Para seguir leyendo",
+    "relatedTitle": "Otros análisis del despacho",
+    "shareLabel": "Compartir",
+    "tableOfContents": "Sumario"
   },
   "PME": {
     "pageEyebrow": "PYMES francófonas",

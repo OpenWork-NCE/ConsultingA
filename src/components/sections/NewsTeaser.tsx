@@ -14,6 +14,7 @@ export function NewsTeaser() {
 
   const items = KEYS.map((key) => ({
     id: key,
+    href: `/actualites/${key}`,
     category: t(`items.${key}.category`),
     date: t(`items.${key}.date`),
     title: t(`items.${key}.title`),

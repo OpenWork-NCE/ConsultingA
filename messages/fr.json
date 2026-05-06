@@ -126,22 +126,140 @@
       "obligations-fiscales-2026": {
         "date": "15 février 2026",
         "category": "Fiscalité",
+        "readingTime": "8 min de lecture",
         "title": "Nouvelles obligations fiscales pour les entreprises en Espagne 2026",
-        "excerpt": "Le gouvernement espagnol a introduit de nouvelles obligations déclaratives pour les entreprises opérant sur le territoire national. Tour d'horizon des changements majeurs."
+        "excerpt": "Le gouvernement espagnol a introduit de nouvelles obligations déclaratives pour les entreprises opérant sur le territoire national. Tour d'horizon des changements majeurs.",
+        "lede": "Le législateur espagnol a confirmé en 2026 plusieurs évolutions structurantes en matière de facturation, de déclarations et de fiscalité internationale. Pour les directions financières et juridiques d'entreprises opérant en Espagne, plusieurs chantiers de mise en conformité doivent être anticipés sans délai.",
+        "body": [
+          {
+            "heading": "Le déploiement progressif de la facturation électronique B2B",
+            "paragraphs": [
+              "La loi 18/2022, dite Crea y Crece, et ses décrets d'application imposent désormais l'émission et la réception de factures électroniques entre entreprises espagnoles. Le calendrier de mise en œuvre s'échelonne en fonction du chiffre d'affaires : les entreprises dont le chiffre d'affaires annuel dépasse huit millions d'euros sont concernées en premier, les autres bénéficient d'une période transitoire.",
+              "Concrètement, chaque facture devra transiter par une plateforme accréditée et respecter un format structuré (Facturae ou équivalent européen). Les entreprises doivent anticiper le choix de leur prestataire, l'intégration avec leur ERP et la formation de leurs équipes comptables — à défaut, des ruptures opérationnelles dans la chaîne client-fournisseur sont prévisibles."
+            ]
+          },
+          {
+            "heading": "Évolution du SII (Suministro Inmediato de Información)",
+            "paragraphs": [
+              "Le SII, dispositif de transmission immédiate des registres TVA à l'Agencia Tributaria, voit son champ d'application progressivement étendu. Les seuils de chiffre d'affaires déclenchant l'obligation sont régulièrement revus à la baisse, et les contrôles automatisés de cohérence entre déclarations TVA et registres SII se sont intensifiés.",
+              "Les écarts détectés peuvent désormais déclencher rapidement une procédure de vérification ciblée, sans nécessairement passer par une notification préalable de routine. Pour les entreprises soumises à l'obligation, la tenue irréprochable des registres devient un enjeu de gestion du risque, pas seulement de conformité."
+            ]
+          },
+          {
+            "heading": "L'impôt minimum global et son déploiement national",
+            "paragraphs": [
+              "La transposition de la directive européenne 2022/2523, issue du Pilier 2 de l'OCDE, introduit en Espagne un impôt complémentaire de quinze pour cent sur les groupes multinationaux dont le chiffre d'affaires consolidé dépasse 750 millions d'euros. Les premières déclarations couvrent les exercices ouverts à compter du 31 décembre 2023, avec des obligations renforcées en 2026.",
+              "Pour les filiales et succursales espagnoles de groupes internationaux, la coordination entre la holding et les entités locales devient un point d'attention majeur : les calculs ETR (taux effectif d'imposition) se font à l'échelle juridictionnelle et requièrent une remontée d'informations précise et harmonisée."
+            ]
+          },
+          {
+            "heading": "Recommandations pratiques",
+            "paragraphs": [
+              "Trois actions concrètes méritent d'être planifiées sans délai :"
+            ],
+            "list": [
+              "Cartographier les flux de facturation B2B pour identifier les chantiers de mise en conformité prioritaires.",
+              "Auditer la cohérence entre les registres SII et les déclarations TVA des trois derniers exercices.",
+              "Pour les groupes internationaux, organiser un alignement avec la fiscalité du siège afin d'anticiper le calcul de l'impôt complémentaire."
+            ]
+          }
+        ]
       },
       "implantation-pme-andalousie": {
         "date": "20 janvier 2026",
         "category": "PME francophones",
+        "readingTime": "10 min de lecture",
         "title": "Guide pratique : implantation d'une PME française en Andalousie",
-        "excerpt": "Les étapes clés et les points de vigilance pour réussir l'implantation de votre PME en Andalousie. Aspects fiscaux, juridiques et administratifs."
+        "excerpt": "Les étapes clés et les points de vigilance pour réussir l'implantation de votre PME en Andalousie. Aspects fiscaux, juridiques et administratifs.",
+        "lede": "L'Andalousie est devenue, ces dernières années, une destination privilégiée pour les PME françaises souhaitant développer une activité en Espagne. Au-delà du cadre de vie attractif, la région offre un environnement administratif et fiscal favorable. Voici les étapes clés et les points de vigilance pour réussir votre implantation.",
+        "body": [
+          {
+            "heading": "Choisir la structure juridique adaptée",
+            "paragraphs": [
+              "Trois options dominent pour une PME française : la Sociedad Limitada (SL), équivalent de la SARL avec un capital social minimum d'un euro depuis la loi Crea y Crece ; le statut d'autónomo pour les entrepreneurs individuels ; et la succursale, qui maintient une dépendance juridique avec la société mère française.",
+              "Le choix dépend des objectifs : implantation autonome avec patrimoine séparé, simple bureau de représentation, ou activité dépendante du siège. Chaque option emporte des conséquences fiscales et sociales spécifiques qu'il convient d'arbitrer en amont, en tenant compte du modèle économique et des perspectives de croissance."
+            ]
+          },
+          {
+            "heading": "Les étapes administratives incontournables",
+            "paragraphs": [
+              "L'implantation commence par l'obtention d'un NIE (Número de Identificación de Extranjero) pour chaque associé non-résident. Vient ensuite la réservation de la dénomination sociale auprès du Registro Mercantil Central, puis l'ouverture d'un compte bancaire pour le dépôt du capital.",
+              "Les statuts sont signés devant notaire, l'inscription au Registro Mercantil de la province concernée formalise la création, et l'obtention du NIF (Número de Identificación Fiscal) auprès de l'Agencia Tributaria conclut le parcours initial. Le délai global est généralement compris entre quatre et huit semaines selon la province et la complexité du dossier."
+            ]
+          },
+          {
+            "heading": "Le cadre fiscal applicable",
+            "paragraphs": [
+              "Les sociétés espagnoles sont soumises à l'Impuesto sobre Sociedades, dont le taux nominal général est de vingt-cinq pour cent. Les entreprises nouvellement créées bénéficient d'un taux réduit de quinze pour cent sur les deux premiers exercices bénéficiaires, sous conditions à vérifier au cas par cas.",
+              "La TVA espagnole (IVA) suit un régime à trois taux principaux (4 %, 10 %, 21 %) et impose une déclaration mensuelle ou trimestrielle selon la taille. Pour les flux intracommunautaires entre la France et l'Espagne, l'inscription au registre VIES est indispensable et conditionne l'application du régime d'autoliquidation."
+            ]
+          },
+          {
+            "heading": "Les pièges fréquents à éviter",
+            "paragraphs": [
+              "Quatre points de vigilance reviennent dans la plupart des dossiers d'implantation :"
+            ],
+            "list": [
+              "La résidence fiscale du dirigeant : un dirigeant qui passe plus de 183 jours par an en Espagne devient résident fiscal espagnol, avec des conséquences personnelles importantes sur le revenu et le patrimoine.",
+              "La double imposition : la convention franco-espagnole existe mais son application requiert un suivi rigoureux et la production des bons certificats de résidence.",
+              "Le calendrier de la TVA : les premières déclarations comportent souvent des erreurs sur les retenues à la source et les régularisations annuelles.",
+              "Les conventions collectives sectorielles espagnoles : elles s'appliquent automatiquement et imposent des obligations en matière de salaire minimum, de congés et de représentation du personnel."
+            ]
+          }
+        ]
       },
       "reforme-droit-societes": {
         "date": "5 janvier 2026",
         "category": "Juridique",
+        "readingTime": "7 min de lecture",
         "title": "Réforme du droit des sociétés espagnol : ce qui change",
-        "excerpt": "Analyse des modifications apportées au droit des sociétés espagnol et leurs implications pour les entreprises étrangères."
+        "excerpt": "Analyse des modifications apportées au droit des sociétés espagnol et leurs implications pour les entreprises étrangères.",
+        "lede": "Plusieurs textes adoptés ces derniers mois modernisent le droit des sociétés espagnol. Au-delà des ajustements techniques, ces évolutions traduisent une volonté d'adapter les structures juridiques aux pratiques numériques et aux exigences européennes de transparence. Analyse pour les dirigeants étrangers et les groupes internationaux.",
+        "body": [
+          {
+            "heading": "La généralisation des assemblées télématiques",
+            "paragraphs": [
+              "La loi 11/2023 a confirmé la possibilité de tenir des assemblées générales entièrement à distance, sans nécessité d'une réunion physique préalable. Les statuts doivent toutefois prévoir explicitement cette modalité, à défaut une modification statutaire est requise.",
+              "Cette évolution facilite la gouvernance des sociétés à actionnariat international, en réduisant les frais et délais liés à la tenue physique des assemblées en Espagne. Elle impose en contrepartie une vigilance particulière sur les conditions de quorum, l'authentification des votes électroniques et la traçabilité des délibérations."
+            ]
+          },
+          {
+            "heading": "Les devoirs renforcés des administrateurs",
+            "paragraphs": [
+              "Le devoir de diligence et le devoir de loyauté ont été précisés, en particulier sur la prévention des conflits d'intérêts et l'exploitation d'opportunités d'affaires. La jurisprudence récente du Tribunal Supremo a confirmé l'application stricte de ces obligations, y compris pour les administrateurs non-résidents qui ne participent pas activement à la gestion quotidienne.",
+              "Pour les groupes internationaux, la cartographie des mandats et la formalisation systématique des décisions d'investissement deviennent des outils défensifs essentiels en cas de contentieux entre associés ou de mise en cause par les autorités."
+            ]
+          },
+          {
+            "heading": "Le régime des sociétés étrangères et la transparence UBO",
+            "paragraphs": [
+              "Les obligations de transparence pesant sur les sociétés opérant en Espagne se sont renforcées : déclaration du bénéficiaire effectif, identification des structures de détention, alignement avec les standards UBO européens issus de la 5e directive anti-blanchiment. Toute modification de l'actionnariat ou de la direction doit désormais être communiquée dans des délais courts.",
+              "Le Registro de Titularidades Reales centralise ces informations et son accès par les autorités compétentes a été facilité. Les sociétés qui n'ont pas mis à jour leurs déclarations s'exposent à des sanctions administratives et à des restrictions de fonctionnement, notamment l'impossibilité de procéder à certaines formalités au Registro Mercantil."
+            ]
+          },
+          {
+            "heading": "Implications pratiques pour les dirigeants étrangers",
+            "paragraphs": [
+              "Quatre actions méritent d'être engagées dans les prochains mois :"
+            ],
+            "list": [
+              "Vérifier que les statuts permettent les assemblées télématiques, et le cas échéant initier une modification statutaire avant la prochaine assemblée générale.",
+              "Documenter formellement les décisions d'investissement et les autorisations d'opérations susceptibles de générer un conflit d'intérêts.",
+              "Mettre à jour les déclarations de bénéficiaires effectifs auprès du Registro de Titularidades Reales.",
+              "Former les administrateurs non-résidents aux obligations spécifiques du droit espagnol des sociétés."
+            ]
+          }
+        ]
       }
     }
+  },
+  "Article": {
+    "backToList": "Toutes les actualités",
+    "publishedOn": "Publié le",
+    "relatedEyebrow": "À lire également",
+    "relatedTitle": "Autres analyses du cabinet",
+    "shareLabel": "Partager",
+    "tableOfContents": "Sommaire"
   },
   "PME": {
     "pageEyebrow": "PME francophones",
