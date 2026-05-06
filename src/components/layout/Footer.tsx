@@ -23,6 +23,7 @@ export function Footer() {
         { href: "/", label: t("columns.cabinet.about") },
         { href: "/actualites", label: t("columns.cabinet.actualites") },
         { href: "/pme-francophones", label: t("columns.cabinet.pme") },
+        { href: "/contact", label: t("columns.cabinet.contact") },
       ],
     },
     {
@@ -35,8 +36,8 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-[var(--color-border)] mt-32">
-      <Container className="py-16 grid gap-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
+    <footer className="border-t border-[var(--color-border)] mt-24 md:mt-32">
+      <Container className="grid gap-10 py-14 sm:grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] md:gap-12 md:py-16">
         <div>
           <Logo
             variant="light"

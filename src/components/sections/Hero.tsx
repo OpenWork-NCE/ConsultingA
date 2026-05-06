@@ -20,7 +20,12 @@ export function Hero() {
   const [head, highlight] = splitHeadline(t("title"));
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-32 md:pt-36 md:pb-40">
+    <section className="relative isolate overflow-hidden pt-24 pb-28 sm:pt-32 sm:pb-32 md:pt-40 md:pb-44">
+      {/* Layer 0 — subtle dot grid that fades toward the bottom of the hero. */}
+      <div
+        aria-hidden
+        className="bg-dots-pattern pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_75%_70%_at_50%_30%,black,transparent_75%)]"
+      />
       {/* Layer 1 — atmosphere. Two spotlights, accent + midnight, drift in. */}
       <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-60"
@@ -32,7 +37,7 @@ export function Hero() {
       />
 
       <Container className="relative z-10 flex flex-col items-center text-center">
-        <span className="inline-flex h-7 items-center gap-2 rounded-[9999px] border border-[var(--color-border)] bg-surface-strong px-3 type-caption text-muted">
+        <span className="inline-flex h-7 items-center gap-2 rounded-[9999px] border border-[var(--color-border)] bg-surface px-3 type-caption text-muted shadow-[var(--shadow-xs)]">
           <span className="size-1.5 rounded-full bg-accent" />
           {t("eyebrow")}
         </span>
@@ -47,11 +52,21 @@ export function Hero() {
           className="type-body-lg mt-6 max-w-2xl text-midnight/82"
         />
 
-        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
-          <LinkButton href="/expertises" variant="primary" size="lg">
+        <div className="mt-10 flex w-full max-w-md flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
+          <LinkButton
+            href="/expertises"
+            variant="primary"
+            size="lg"
+            className="w-full sm:w-auto"
+          >
             {t("primaryCta")}
           </LinkButton>
-          <LinkButton href="/pme-francophones" variant="ghost" size="lg">
+          <LinkButton
+            href="/contact"
+            variant="ghost"
+            size="lg"
+            className="w-full sm:w-auto"
+          >
             {t("secondaryCta")}
           </LinkButton>
         </div>

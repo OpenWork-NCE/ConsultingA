@@ -52,7 +52,10 @@ function LegalContent() {
 
             <div className="space-y-4">
               {SECTION_KEYS.map(({ key, id }) => (
-                <CardSpotlight key={key} className="scroll-mt-24 p-8">
+                <CardSpotlight
+                  key={key}
+                  className="scroll-mt-24 p-8 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]"
+                >
                   <article id={id}>
                     <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.4px] text-midnight">
                       {t(`sections.${key}.title`)}

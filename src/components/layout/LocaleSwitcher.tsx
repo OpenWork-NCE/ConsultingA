@@ -16,7 +16,7 @@ export function LocaleSwitcher() {
     <div
       role="group"
       aria-label="Language"
-      className="inline-flex items-center rounded-[9999px] border border-[var(--color-border)] p-[2px] bg-surface-strong"
+      className="inline-flex items-center rounded-[9999px] border border-[var(--color-border)] p-[2px] bg-surface"
     >
       {routing.locales.map((code) => {
         const active = code === locale;

@@ -12,14 +12,17 @@ export function Stats() {
   const numberLocale = locale === "es" ? "es-ES" : "fr-FR";
 
   return (
-    <section className="border-t border-[var(--color-border)] py-20 md:py-24">
+    <section className="relative isolate bg-surface-soft py-16 md:py-20">
       <Container className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {KEYS.map((key) => {
           const raw = t(`items.${key}.value`);
           const parsed = parseStat(raw);
           return (
-            <CardSpotlight key={key} className="p-8">
-              <div className="type-section text-[44px] leading-none tracking-[-1px] tabular-nums text-midnight">
+            <CardSpotlight
+              key={key}
+              className="bg-surface p-7 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)] md:p-8"
+            >
+              <div className="type-section text-[40px] leading-none tracking-[-0.9px] tabular-nums text-midnight md:text-[44px] md:tracking-[-1px]">
                 <NumberTicker
                   value={parsed.value}
                   decimals={parsed.decimals}

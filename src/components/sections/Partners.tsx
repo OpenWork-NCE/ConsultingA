@@ -51,7 +51,7 @@ export function Partners() {
   const t = useTranslations("Partners");
 
   return (
-    <section className="border-t border-[var(--color-border)] py-24 md:py-32">
+    <section className="bg-surface-soft py-20 md:py-24">
       <Container>
         <div className="max-w-2xl">
           <p className="type-caption font-semibold uppercase tracking-wide text-accent">

@@ -23,7 +23,7 @@ export function NewsTeaser() {
   }));
 
   return (
-    <section className="border-t border-[var(--color-border)] py-24 md:py-32">
+    <section className="bg-surface-soft py-20 md:py-28">
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">

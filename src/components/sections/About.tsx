@@ -38,7 +38,7 @@ export function About() {
   const tP = useTranslations("Pillars");
 
   return (
-    <section className="border-t border-[var(--color-border)] py-24 md:py-32">
+    <section className="py-24 md:py-32">
       <Container>
         <div className="max-w-2xl">
           <p className="type-caption font-semibold uppercase tracking-wide text-accent">
@@ -80,7 +80,7 @@ type PillarCellProps = {
 function PillarCell({ area, icon, title, description }: PillarCellProps) {
   return (
     <li className={cn("min-h-[14rem] list-none", area)}>
-      <div className="relative h-full rounded-[14px] border border-[var(--color-border)] p-2 md:rounded-[16px] md:p-3">
+      <div className="relative h-full rounded-[14px] border border-[var(--color-border)] bg-surface p-2 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)] md:rounded-[16px] md:p-3">
         <GlowingEffect
           spread={40}
           glow
@@ -90,7 +90,7 @@ function PillarCell({ area, icon, title, description }: PillarCellProps) {
           borderWidth={2}
         />
         <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-surface p-6 md:p-7">
-          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-strong text-midnight">
+          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-soft text-midnight">
             {icon}
           </div>
           <div className="space-y-3">

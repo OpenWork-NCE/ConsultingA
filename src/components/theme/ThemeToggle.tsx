@@ -48,7 +48,7 @@ export function ThemeToggle() {
       title={label}
       className={cn(
         "size-9 inline-flex items-center justify-center rounded-[9999px]",
-        "border border-[var(--color-border)] bg-surface-strong",
+        "border border-[var(--color-border)] bg-surface",
         "text-midnight transition-colors hover:bg-midnight/[0.06]",
       )}
     >

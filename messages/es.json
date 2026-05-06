@@ -1,11 +1,15 @@
 {
   "Brand": {
-    "name": "Despacho de Expertos",
+    "name": "Despacho de Asesoría Contable",
+    "secondary": "Despacho de Asesoría Jurídica",
     "tagline": "Excelencia contable y jurídica en Andalucía"
   },
   "Theme": {
     "toDark": "Activar el tema oscuro",
     "toLight": "Activar el tema claro"
+  },
+  "FloatingControls": {
+    "toTop": "Volver al principio"
   },
   "Nav": {
     "home": "Inicio",
@@ -295,6 +299,30 @@
       "ccfe": { "name": "Cámara de Comercio Franco-Española", "type": "Cámara consular" }
     }
   },
+  "Contact": {
+    "pageEyebrow": "Contacto",
+    "pageTitle": "Hablemos de su expediente con total confidencialidad.",
+    "pageSubtitle": "Una primera conversación permite delimitar su necesidad y orientarle hacia la mejor forma de gestionarla. Nuestro equipo responde en un día hábil.",
+    "phone": {
+      "label": "Teléfono",
+      "value": "+34 675 578 892",
+      "note": "Lunes a viernes · 9h–18h"
+    },
+    "email": {
+      "label": "Correo electrónico",
+      "value": "administracion@consultingadm.com",
+      "note": "Respuesta en un día hábil"
+    },
+    "address": {
+      "label": "Dirección",
+      "lines": ["Málaga", "Andalucía, España"],
+      "note": "Sólo con cita previa"
+    },
+    "languagesLabel": "Idiomas de trabajo",
+    "languages": "Français · Español · English",
+    "responseLabel": "Plazo de respuesta",
+    "response": "En un día hábil"
+  },
   "ContactCTA": {
     "title": "Hablemos de su expediente con total confidencialidad.",
     "subtitle": "Una primera conversación permite delimitar su necesidad y orientarle hacia la mejor forma de gestionarla.",
@@ -308,7 +336,7 @@
     "sections": {
       "editor": {
         "title": "Editor del sitio",
-        "body": "El presente sitio es editado por el Despacho de Expertos, con sede en Málaga, Andalucía, España. Para cualquier cuestión relativa a este sitio, puede contactarnos en contact@cabinet-expertise.com."
+        "body": "El presente sitio es editado por el Despacho de Asesoría Contable, con sede en Málaga, Andalucía, España. Para cualquier cuestión relativa a este sitio, puede contactarnos en administracion@consultingadm.com."
       },
       "host": {
         "title": "Alojamiento",
@@ -320,7 +348,7 @@
       },
       "data": {
         "title": "Datos personales",
-        "body": "Los datos recogidos a través de los formularios de contacto se tratan en estricto cumplimiento del Reglamento (UE) 2016/679 (RGPD). Conforme a la normativa, dispone de un derecho de acceso, rectificación, supresión y oposición que puede ejercer en contact@cabinet-expertise.com."
+        "body": "Los datos recogidos a través de los formularios de contacto se tratan en estricto cumplimiento del Reglamento (UE) 2016/679 (RGPD). Conforme a la normativa, dispone de un derecho de acceso, rectificación, supresión y oposición que puede ejercer en administracion@consultingadm.com."
       },
       "cookies": {
         "title": "Cookies",
@@ -335,8 +363,8 @@
   "Footer": {
     "tagline": "Despacho de expertos contables y asesoría jurídica al servicio de una clientela exigente en Andalucía.",
     "address": "Málaga, Andalucía, España",
-    "phone": "+34 000 000 000",
-    "email": "contact@cabinet-expertise.com",
+    "phone": "+34 675 578 892",
+    "email": "administracion@consultingadm.com",
     "columns": {
       "expertises": {
         "title": "Áreas",
@@ -349,7 +377,8 @@
         "title": "Despacho",
         "about": "Quiénes somos",
         "actualites": "Actualidad",
-        "pme": "PYMES francófonas"
+        "pme": "PYMES francófonas",
+        "contact": "Contacto"
       },
       "legal": {
         "title": "Información",
@@ -357,6 +386,6 @@
         "privacy": "Política de privacidad"
       }
     },
-    "copyright": "© 2026 Despacho de Expertos. Todos los derechos reservados."
+    "copyright": "© 2026 Despacho de Asesoría Contable. Todos los derechos reservados."
   }
 }

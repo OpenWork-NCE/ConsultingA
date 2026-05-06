@@ -24,7 +24,7 @@ export function ExpertisesTeaser() {
   const tE = useTranslations("Expertises");
 
   return (
-    <section className="border-t border-[var(--color-border)] py-24 md:py-32">
+    <section className="py-24 md:py-32">
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
@@ -44,10 +44,13 @@ export function ExpertisesTeaser() {
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {EXPERTISES.map(({ key, icon: Icon }, index) => (
-            <GlareCard key={key} className="h-full">
+            <GlareCard
+              key={key}
+              className="h-full shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]"
+            >
               <div className="flex h-full flex-col p-7">
                 <div className="flex items-center justify-between">
-                  <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-strong text-midnight">
+                  <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-soft text-midnight">
                     <Icon className="size-5" />
                   </div>
                   <span className="type-caption font-medium tabular-nums text-muted">

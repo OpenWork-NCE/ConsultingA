@@ -1,11 +1,15 @@
 {
   "Brand": {
-    "name": "Cabinet d'Expertise",
+    "name": "Cabinet d'Expertise-Comptable",
+    "secondary": "Cabinet de Conseil Juridique",
     "tagline": "Excellence comptable & juridique en Andalousie"
   },
   "Theme": {
     "toDark": "Activer le thème sombre",
     "toLight": "Activer le thème clair"
+  },
+  "FloatingControls": {
+    "toTop": "Revenir en haut de page"
   },
   "Nav": {
     "home": "Accueil",
@@ -295,6 +299,30 @@
       "ccfe": { "name": "Chambre de Commerce Franco-Espagnole", "type": "Chambre consulaire" }
     }
   },
+  "Contact": {
+    "pageEyebrow": "Contact",
+    "pageTitle": "Discutons de votre dossier en toute confidentialité.",
+    "pageSubtitle": "Un premier échange permet de cadrer votre besoin et de vous orienter vers la prise en charge la plus adaptée. Notre équipe vous répond sous un jour ouvré.",
+    "phone": {
+      "label": "Téléphone",
+      "value": "+34 675 578 892",
+      "note": "Lundi — vendredi · 9h–18h"
+    },
+    "email": {
+      "label": "Email",
+      "value": "administracion@consultingadm.com",
+      "note": "Réponse sous un jour ouvré"
+    },
+    "address": {
+      "label": "Adresse",
+      "lines": ["Málaga", "Andalousie, Espagne"],
+      "note": "Sur rendez-vous uniquement"
+    },
+    "languagesLabel": "Langues de travail",
+    "languages": "Français · Español · English",
+    "responseLabel": "Délai de réponse",
+    "response": "Sous un jour ouvré"
+  },
   "ContactCTA": {
     "title": "Discutons de votre dossier en toute confidentialité.",
     "subtitle": "Un premier échange permet de cadrer votre besoin et de vous orienter vers la prise en charge la plus adaptée.",
@@ -308,7 +336,7 @@
     "sections": {
       "editor": {
         "title": "Éditeur du site",
-        "body": "Le présent site est édité par le Cabinet d'Expertise, dont le siège est situé à Málaga, Andalousie, Espagne. Pour toute question relative au présent site, vous pouvez nous joindre à l'adresse contact@cabinet-expertise.com."
+        "body": "Le présent site est édité par le Cabinet d'Expertise-Comptable, dont le siège est situé à Málaga, Andalousie, Espagne. Pour toute question relative au présent site, vous pouvez nous joindre à l'adresse administracion@consultingadm.com."
       },
       "host": {
         "title": "Hébergement",
@@ -320,7 +348,7 @@
       },
       "data": {
         "title": "Données personnelles",
-        "body": "Les données collectées via les formulaires de contact sont traitées dans le strict respect du Règlement (UE) 2016/679 (RGPD). Conformément à la réglementation, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition que vous pouvez exercer à l'adresse contact@cabinet-expertise.com."
+        "body": "Les données collectées via les formulaires de contact sont traitées dans le strict respect du Règlement (UE) 2016/679 (RGPD). Conformément à la réglementation, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition que vous pouvez exercer à l'adresse administracion@consultingadm.com."
       },
       "cookies": {
         "title": "Cookies",
@@ -335,8 +363,8 @@
   "Footer": {
     "tagline": "Cabinet d'expertise-comptable & conseil juridique au service d'une clientèle exigeante en Andalousie.",
     "address": "Málaga, Andalousie, Espagne",
-    "phone": "+34 000 000 000",
-    "email": "contact@cabinet-expertise.com",
+    "phone": "+34 675 578 892",
+    "email": "administracion@consultingadm.com",
     "columns": {
       "expertises": {
         "title": "Expertises",
@@ -349,7 +377,8 @@
         "title": "Cabinet",
         "about": "Qui sommes-nous",
         "actualites": "Actualités",
-        "pme": "PME francophones"
+        "pme": "PME francophones",
+        "contact": "Contact"
       },
       "legal": {
         "title": "Informations",
@@ -357,6 +386,6 @@
         "privacy": "Politique de confidentialité"
       }
     },
-    "copyright": "© 2026 Cabinet d'Expertise. Tous droits réservés."
+    "copyright": "© 2026 Cabinet d'Expertise-Comptable. Tous droits réservés."
   }
 }

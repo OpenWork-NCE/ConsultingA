@@ -8,30 +8,20 @@ type PageHeaderProps = {
 };
 
 /**
- * Page header for inner routes — replicates the Hero atmosphere (Spotlight +
- * faint dot grid, masked to a soft ellipse) so each top-of-page feels of the
- * same family while staying lighter than the home Hero.
+ * Page header for inner routes — Hero-family atmosphere (Spotlight + dot
+ * grid) but lighter than the home Hero. Uses `bg-grid-pattern` masked to a
+ * top-anchored ellipse so the texture fades cleanly into the page body.
  */
 export function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps) {
   return (
-    <section className="relative overflow-hidden border-b border-[var(--color-border)] pt-24 pb-20 md:pt-32 md:pb-24">
+    <section className="relative isolate overflow-hidden border-b border-[var(--color-border)] pt-24 pb-16 md:pt-32 md:pb-24">
       <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-60"
         fill="#2563eb"
       />
-      {/* Faint dot grid — masked to fade toward the page edges. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, rgba(15,23,42,0.18) 1px, transparent 0)",
-          backgroundSize: "20px 20px",
-          WebkitMaskImage:
-            "radial-gradient(ellipse 70% 80% at 50% 35%, black, transparent 75%)",
-          maskImage:
-            "radial-gradient(ellipse 70% 80% at 50% 35%, black, transparent 75%)",
-        }}
+        className="bg-dots-pattern pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_70%_80%_at_50%_30%,black,transparent_75%)]"
       />
 
       <Container className="relative z-10">

@@ -23,7 +23,7 @@ export function TextGenerateEffect({
   duration = 0.5,
 }: TextGenerateEffectProps) {
   const [scope, animate] = useAnimate();
-  const wordsArray = words.split(" ");
+  const wordsArray = words.trim().split(/\s+/);
 
   useEffect(() => {
     animate(
@@ -46,7 +46,7 @@ export function TextGenerateEffect({
           <motion.span
             // eslint-disable-next-line react/no-array-index-key
             key={`${word}-${idx}`}
-            className="inline-block opacity-0"
+            className="opacity-0"
             style={{ filter: filter ? "blur(10px)" : "none" }}
           >
             {word}{" "}

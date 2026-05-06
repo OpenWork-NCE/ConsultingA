@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingControls } from "@/components/layout/FloatingControls";
 import { ThemeScript } from "@/components/theme/ThemeScript";
 import type { Metadata } from "next";
 import "../globals.css";
@@ -56,6 +57,7 @@ export default async function LocaleLayout({
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
+          <FloatingControls />
         </NextIntlClientProvider>
       </body>
     </html>

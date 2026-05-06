@@ -44,7 +44,7 @@ function ActualitesContent() {
                   href={`/actualites/${key}`}
                   className="block focus-visible:outline-none"
                 >
-                  <CardSpotlight className="p-8 md:p-10">
+                  <CardSpotlight className="p-8 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)] md:p-10">
                     <div className="flex flex-col">
                       <div className="flex flex-wrap items-center gap-3 type-caption text-muted">
                         <span className="font-semibold uppercase tracking-wide text-midnight">

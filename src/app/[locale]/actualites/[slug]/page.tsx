@@ -84,7 +84,7 @@ function ArticleContent({ slug }: { slug: ArticleKey }) {
           </Link>
 
           <div className="mt-8 flex flex-wrap items-center gap-3 type-caption text-muted">
-            <span className="rounded-[9999px] border border-[var(--color-border)] bg-surface-strong px-3 py-1 font-semibold uppercase tracking-wide text-midnight">
+            <span className="rounded-[9999px] border border-[var(--color-border)] bg-surface px-3 py-1 font-semibold uppercase tracking-wide text-midnight">
               {t(`items.${slug}.category`)}
             </span>
             <span aria-hidden className="size-1 rounded-full bg-[var(--color-border-strong)]" />
@@ -167,7 +167,7 @@ function ArticleContent({ slug }: { slug: ArticleKey }) {
                 href={`/actualites/${relatedSlug}`}
                 className="block focus-visible:outline-none"
               >
-                <CardSpotlight className="h-full p-7">
+                <CardSpotlight className="h-full p-7 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]">
                   <div className="flex items-center gap-3 type-caption text-muted">
                     <span className="font-semibold uppercase tracking-wide text-midnight">
                       {t(`items.${relatedSlug}.category`)}

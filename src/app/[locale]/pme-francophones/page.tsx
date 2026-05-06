@@ -95,7 +95,7 @@ function PmeContent() {
         </Container>
       </section>
 
-      <section className="border-t border-[var(--color-border)] py-20 md:py-28">
+      <section className="bg-surface-soft py-20 md:py-24">
         <Container>
           <div className="max-w-2xl">
             <h2 className="type-section text-midnight">
@@ -132,7 +132,7 @@ type AdvantageCellProps = {
 function AdvantageCell({ area, icon, title, description }: AdvantageCellProps) {
   return (
     <li className={cn("min-h-[14rem] list-none", area)}>
-      <div className="relative h-full rounded-[14px] border border-[var(--color-border)] p-2 md:rounded-[16px] md:p-3">
+      <div className="relative h-full rounded-[14px] border border-[var(--color-border)] bg-surface p-2 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)] md:rounded-[16px] md:p-3">
         <GlowingEffect
           spread={40}
           glow
@@ -142,7 +142,7 @@ function AdvantageCell({ area, icon, title, description }: AdvantageCellProps) {
           borderWidth={2}
         />
         <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-surface p-6 md:p-7">
-          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-strong text-midnight">
+          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-soft text-midnight">
             {icon}
           </div>
           <div className="space-y-3">

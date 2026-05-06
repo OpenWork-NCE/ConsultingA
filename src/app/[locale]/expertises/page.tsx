@@ -88,7 +88,7 @@ function ExpertiseCard({
     <div
       id={id}
       className={cn(
-        "relative scroll-mt-24 rounded-[14px] border border-[var(--color-border)] p-2 md:rounded-[16px] md:p-3",
+        "relative scroll-mt-24 rounded-[14px] border border-[var(--color-border)] bg-surface p-2 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)] md:rounded-[16px] md:p-3",
       )}
     >
       <GlowingEffect
@@ -101,7 +101,7 @@ function ExpertiseCard({
       />
       <div className="relative flex h-full flex-col gap-7 overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-surface p-8 md:p-10">
         <div className="flex items-center justify-between">
-          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-strong text-midnight">
+          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-soft text-midnight">
             {icon}
           </div>
           <span className="type-caption tabular-nums font-medium text-muted">

@@ -1,54 +1,69 @@
 @import "tailwindcss";
 
-/*
- * Dark variant — applies when the documentElement (or any ancestor) carries
- * the `dark` class. The ThemeProvider toggles this class manually.
- */
 @custom-variant dark (&:where(.dark, .dark *));
 
 /*
- * ConsultingADM — Design tokens.
- * Light theme is the canonical DESIGN.md palette. Dark theme inverts the
- * neutrals while preserving the opacity-driven model and the Vivid Blue accent.
+ * ConsultingADM — Design system tokens.
  *
- * `--color-midnight` and `--color-paper` are inversed siblings: anywhere we
- * stack `bg-midnight + text-paper`, the pair flips cleanly when the theme
- * changes (e.g. CTA banner, glyph chips, secondary buttons).
+ * Three-level surface hierarchy (page → card → chip) plus an alternate
+ * "soft" surface for section rhythm. Shadows form a 4-step scale shared
+ * across light and dark, retuned per theme to keep the perceived elevation
+ * intuitive (light mode: cool drop-shadows; dark mode: deeper black).
  */
 @theme {
+  /* Page + surface hierarchy */
   --color-background: #f8fafc;
-  --color-surface: #f8fafc;
-  --color-surface-strong: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f1f5f9;
   --color-foreground: #0f172a;
   --color-muted: #475569;
-  --color-accent: #2563eb;
-  --color-accent-ring: rgba(37, 99, 235, 0.5);
 
+  /* Brand */
+  --color-accent: #2563eb;
+  --color-accent-soft: rgba(37, 99, 235, 0.10);
+  --color-accent-ring: rgba(37, 99, 235, 0.5);
   --color-midnight: #0f172a;
   --color-paper: #ffffff;
 
+  /* Borders */
   --color-border: #e2e8f0;
   --color-border-strong: rgba(15, 23, 42, 0.4);
 
+  /* Type system */
   --font-sans: "Camera Plain Variable", ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
+  /* Radii */
   --radius-pill: 9999px;
   --radius-card: 12px;
   --radius-button: 6px;
 
+  /* Shadow scale — light mode (cool, low alpha) */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-sm:
+    0 1px 3px 0 rgba(15, 23, 42, 0.06),
+    0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  --shadow-md:
+    0 8px 24px -8px rgba(15, 23, 42, 0.10),
+    0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg:
+    0 24px 48px -12px rgba(15, 23, 42, 0.14),
+    0 8px 16px -4px rgba(15, 23, 42, 0.06);
+
+  /* Specialty shadows (kept from prior tokens) */
   --shadow-button-inset:
     rgba(255, 255, 255, 0.2) 0px 0.5px 0px 0px inset,
     rgba(0, 0, 0, 0.2) 0px 0px 0px 0.5px inset,
     rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   --shadow-focus: rgba(15, 23, 42, 0.1) 0px 4px 12px;
+  --shadow-card-hover: 0 16px 36px -8px rgba(15, 23, 42, 0.14);
 }
 
-/* Dark theme overrides — semantic tokens flip, the accent stays. */
+/* Dark theme overrides — same scale, retuned for dark perception. */
 :where(.dark) {
   --color-background: #070b16;
-  --color-surface: #0b1220;
-  --color-surface-strong: #131c2f;
+  --color-surface: #0f172a;
+  --color-surface-soft: #0b1220;
   --color-foreground: #f1f5f9;
   --color-muted: #94a3b8;
 
@@ -58,31 +73,38 @@
   --color-border: rgba(241, 245, 249, 0.10);
   --color-border-strong: rgba(241, 245, 249, 0.30);
 
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.30);
+  --shadow-sm:
+    0 1px 3px 0 rgba(0, 0, 0, 0.40),
+    0 1px 2px -1px rgba(0, 0, 0, 0.20);
+  --shadow-md:
+    0 8px 24px -8px rgba(0, 0, 0, 0.55),
+    0 2px 6px -1px rgba(0, 0, 0, 0.30);
+  --shadow-lg:
+    0 24px 48px -12px rgba(0, 0, 0, 0.70),
+    0 8px 16px -4px rgba(0, 0, 0, 0.40);
+
   --shadow-button-inset:
     rgba(255, 255, 255, 0.04) 0px 0.5px 0px 0px inset,
     rgba(0, 0, 0, 0.4) 0px 0px 0px 0.5px inset,
     rgba(0, 0, 0, 0.3) 0px 1px 2px 0px;
   --shadow-focus: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+  --shadow-card-hover: 0 16px 36px -8px rgba(0, 0, 0, 0.55);
 }
 
-/*
- * Aceternity / shadcn-style aliases — many copy-pasted UI snippets reference
- * the unprefixed `--background`, `--foreground`, `--card`, `--ring`, etc.
- * tokens. We forward them to our semantic palette so they inherit the
- * DESIGN.md theme automatically (and flip with the `.dark` class).
- */
+/* shadcn/ui-style aliases for Aceternity copy-paste compatibility. */
 :where(:root) {
   --background: var(--color-background);
   --foreground: var(--color-foreground);
-  --card: var(--color-surface-strong);
+  --card: var(--color-surface);
   --card-foreground: var(--color-foreground);
-  --popover: var(--color-surface-strong);
+  --popover: var(--color-surface);
   --popover-foreground: var(--color-foreground);
   --primary: var(--color-midnight);
   --primary-foreground: var(--color-paper);
-  --secondary: var(--color-surface);
+  --secondary: var(--color-surface-soft);
   --secondary-foreground: var(--color-foreground);
-  --muted: var(--color-surface);
+  --muted: var(--color-surface-soft);
   --muted-foreground: var(--color-muted);
   --accent: var(--color-accent);
   --accent-foreground: #ffffff;
@@ -112,39 +134,35 @@ body {
   color: var(--color-foreground);
 }
 
+/* Typography classes — DESIGN.md spec, downsteps on mobile. */
 .type-display {
   font-size: 60px;
   line-height: 1.05;
   letter-spacing: -1.5px;
   font-weight: 600;
 }
-
 .type-section {
   font-size: 48px;
   line-height: 1.10;
   letter-spacing: -1.2px;
   font-weight: 600;
 }
-
 .type-sub {
   font-size: 36px;
   line-height: 1.15;
   letter-spacing: -0.9px;
   font-weight: 600;
 }
-
 .type-body-lg {
   font-size: 18px;
   line-height: 1.40;
   font-weight: 400;
 }
-
 .type-body {
   font-size: 16px;
   line-height: 1.50;
   font-weight: 400;
 }
-
 .type-caption {
   font-size: 14px;
   line-height: 1.50;
@@ -153,45 +171,70 @@ body {
 
 @media (max-width: 768px) {
   .type-display {
-    font-size: 40px;
-    letter-spacing: -1px;
+    font-size: 36px;
+    letter-spacing: -0.9px;
+    line-height: 1.08;
   }
   .type-section {
-    font-size: 32px;
-    letter-spacing: -0.8px;
+    font-size: 28px;
+    letter-spacing: -0.7px;
+    line-height: 1.15;
   }
   .type-sub {
-    font-size: 26px;
-    letter-spacing: -0.6px;
+    font-size: 22px;
+    letter-spacing: -0.5px;
   }
-}
-
-/* Bento decorative shine — sweeps a subtle highlight across a dark header. */
-@keyframes shine {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
+  .type-body-lg {
+    font-size: 16px;
   }
 }
 
 /*
- * Aceternity Infinite Moving Cards — duplicates the lane and scrolls forever.
- * Pause on hover is wired via the `[animation-play-state:paused]` Tailwind
- * arbitrary variant on the consumer.
+ * Decorative background utilities — three reusable layers for atmosphere
+ * without requiring a JS component. Each adapts to dark mode via `.dark`.
  */
-@keyframes scroll {
-  to {
-    transform: translateX(calc(-50% - 0.75rem));
-  }
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
-.animate-scroll {
-  animation: scroll var(--animation-duration, 40s)
-    var(--animation-direction, forwards) linear infinite;
+.dark .bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(241, 245, 249, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(241, 245, 249, 0.05) 1px, transparent 1px);
 }
 
-/* Aceternity Spotlight — fades + drifts the hero atmosphere on first paint. */
+.bg-dots-pattern {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(15, 23, 42, 0.10) 1px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+}
+.dark .bg-dots-pattern {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(241, 245, 249, 0.10) 1px,
+    transparent 0
+  );
+}
+
+.bg-noise-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.09 0 0 0 0 0.16 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Halo behind conversion surfaces — large radial bloom. */
+.bg-halo-accent {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 50%,
+    rgba(37, 99, 235, 0.18),
+    transparent 70%
+  );
+}
+
+/* Aceternity Spotlight keyframe — fades + drifts hero atmosphere. */
 @keyframes spotlight {
   0% {
     opacity: 0;
@@ -206,6 +249,30 @@ body {
   animation: spotlight 2s ease 0.6s 1 forwards;
 }
 
+/* Bento decorative shine — sweeps a subtle highlight across a dark header. */
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/*
+ * Aceternity Infinite Moving Cards — duplicates the lane and scrolls forever.
+ */
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+}
+
+/* Focus state — Vivid Blue ring + soft shadow. */
 :where(a, button, [role="button"], input, textarea, select):focus-visible {
   outline: none;
   box-shadow:
@@ -213,4 +280,12 @@ body {
     0 0 0 4px var(--color-accent-ring),
     var(--shadow-focus);
   border-radius: var(--radius-button);
+}
+
+/* Respect reduced motion — turn off long ambient animations. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-spotlight,
+  .animate-scroll {
+    animation: none !important;
+  }
 }
