@@ -37,51 +37,22 @@
   },
   "Pillars": {
     "title": "Nuestros pilares fundamentales",
-    "pointsLabel": "Compromisos concretos",
     "items": {
       "rigueur": {
         "title": "Rigor",
-        "tagline": "Metodología paso a paso",
-        "description": "Una metodología contrastada y una atención meticulosa a cada expediente, del diagnóstico inicial a la entrega.",
-        "points": [
-          "Diagnóstico inicial documentado",
-          "Carta de misión enmarcada y firmada",
-          "Revisión trimestral del conjunto de expedientes",
-          "Trazabilidad de cada decisión y de sus fundamentos"
-        ]
+        "description": "Una metodología contrastada y una atención meticulosa a cada expediente."
       },
       "confidentialite": {
         "title": "Confidencialidad",
-        "tagline": "Secreto profesional garantizado",
-        "description": "La discreción absoluta es el núcleo de nuestra práctica, enmarcada por las obligaciones legales del secreto profesional.",
-        "points": [
-          "Artículo 199 del Código Penal — secreto profesional",
-          "Separación estricta de los expedientes entre equipos",
-          "Compromisos de confidencialidad firmados por cada colaborador",
-          "Alojamiento de los documentos en servidores en España"
-        ]
+        "description": "La discreción absoluta es el núcleo de nuestra práctica."
       },
       "excellence": {
         "title": "Excelencia",
-        "tagline": "Una exigencia permanente",
-        "description": "Un compromiso constante con la calidad y la búsqueda de soluciones a medida para cada clientela.",
-        "points": [
-          "Formación continua obligatoria de los equipos",
-          "Enfoque pluridisciplinar (fiscal, jurídico, contable)",
-          "Vigilancia internacional franco-española activa",
-          "Soluciones a medida, jamás estandarizadas"
-        ]
+        "description": "Un compromiso constante con la calidad y la búsqueda de soluciones a medida."
       },
       "conformite": {
         "title": "Cumplimiento",
-        "tagline": "Marcos respetados",
-        "description": "Una vigilancia permanente de las evoluciones legislativas y reglamentarias, alineada con los estándares europeos y sectoriales.",
-        "points": [
-          "RGPD — Reglamento (UE) 2016/679",
-          "ISO 27001 — seguridad de la información",
-          "Ley 10/2010 — prevención del blanqueo",
-          "Marcos sectoriales España y Unión Europea"
-        ]
+        "description": "Una vigilancia permanente de las evoluciones legislativas y reglamentarias."
       }
     }
   },

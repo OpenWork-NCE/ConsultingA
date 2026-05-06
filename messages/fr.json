@@ -37,51 +37,22 @@
   },
   "Pillars": {
     "title": "Nos piliers fondamentaux",
-    "pointsLabel": "Engagements concrets",
     "items": {
       "rigueur": {
         "title": "Rigueur",
-        "tagline": "Méthodologie pas-à-pas",
-        "description": "Une méthodologie éprouvée et une attention minutieuse portée à chaque dossier, du diagnostic initial à la livraison.",
-        "points": [
-          "Diagnostic initial documenté",
-          "Lettre de mission cadrée et signée",
-          "Revue trimestrielle de l'ensemble des dossiers",
-          "Traçabilité de chaque décision et de ses fondements"
-        ]
+        "description": "Une méthodologie éprouvée et une attention minutieuse portée à chaque dossier."
       },
       "confidentialite": {
         "title": "Confidentialité",
-        "tagline": "Secret professionnel garanti",
-        "description": "La discrétion absolue est au cœur de notre pratique, encadrée par les obligations légales du secret professionnel.",
-        "points": [
-          "Article 226-13 du Code pénal — secret professionnel",
-          "Cloisonnement strict des dossiers entre équipes",
-          "Engagements de confidentialité signés par chaque collaborateur",
-          "Hébergement des documents sur serveurs en Espagne"
-        ]
+        "description": "La discrétion absolue est au cœur de notre pratique."
       },
       "excellence": {
         "title": "Excellence",
-        "tagline": "Une exigence permanente",
-        "description": "Un engagement constant envers la qualité et la recherche de solutions sur mesure pour chaque clientèle.",
-        "points": [
-          "Formation continue obligatoire des équipes",
-          "Approche pluridisciplinaire (fiscal, juridique, comptable)",
-          "Veille internationale franco-espagnole active",
-          "Solutions taillées sur mesure, jamais standardisées"
-        ]
+        "description": "Un engagement constant envers la qualité et la recherche de solutions sur mesure."
       },
       "conformite": {
         "title": "Conformité",
-        "tagline": "Cadres respectés",
-        "description": "Une veille permanente sur les évolutions législatives et réglementaires, alignée sur les standards européens et sectoriels.",
-        "points": [
-          "RGPD — Règlement (UE) 2016/679",
-          "ISO 27001 — sécurité de l'information",
-          "Loi 10/2010 — prévention du blanchiment",
-          "Cadres sectoriels Espagne & Union européenne"
-        ]
+        "description": "Une veille permanente sur les évolutions législatives et réglementaires."
       }
     }
   },

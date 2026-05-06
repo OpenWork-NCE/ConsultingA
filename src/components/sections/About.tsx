@@ -1,33 +1,41 @@
 import { useTranslations } from "next-intl";
+import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
-import { Tabs } from "@/components/aceternity/tabs";
+import { GlowingEffect } from "@/components/aceternity/glowing-effect";
+import {
+  DiamondIcon,
+  LockIcon,
+  ScaleIcon,
+  ShieldCheckIcon,
+} from "@/components/icons";
+import { cn } from "@/lib/utils";
 
-const PILLAR_KEYS = [
-  "rigueur",
-  "confidentialite",
-  "excellence",
-  "conformite",
+const PILLARS = [
+  {
+    key: "rigueur",
+    icon: ScaleIcon,
+    area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
+  },
+  {
+    key: "confidentialite",
+    icon: LockIcon,
+    area: "md:[grid-area:1/7/2/13] xl:[grid-area:1/5/3/8]",
+  },
+  {
+    key: "excellence",
+    icon: DiamondIcon,
+    area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/8/2/13]",
+  },
+  {
+    key: "conformite",
+    icon: ShieldCheckIcon,
+    area: "md:[grid-area:2/7/3/13] xl:[grid-area:2/8/3/13]",
+  },
 ] as const;
 
 export function About() {
   const t = useTranslations("About");
   const tP = useTranslations("Pillars");
-
-  const tabs = PILLAR_KEYS.map((key) => {
-    const points = tP.raw(`items.${key}.points`) as string[];
-    return {
-      title: tP(`items.${key}.title`),
-      value: key,
-      content: (
-        <PillarPanel
-          tagline={tP(`items.${key}.tagline`)}
-          description={tP(`items.${key}.description`)}
-          pointsLabel={tP("pointsLabel")}
-          points={points}
-        />
-      ),
-    };
-  });
 
   return (
     <section className="border-t border-[var(--color-border)] py-24 md:py-32">
@@ -44,53 +52,55 @@ export function About() {
           <h3 className="type-caption mb-6 font-semibold uppercase tracking-wide text-midnight">
             {tP("title")}
           </h3>
-          <Tabs tabs={tabs} />
+
+          <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-2 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+            {PILLARS.map(({ key, icon: Icon, area }) => (
+              <PillarCell
+                key={key}
+                area={area}
+                icon={<Icon className="size-5" />}
+                title={tP(`items.${key}.title`)}
+                description={tP(`items.${key}.description`)}
+              />
+            ))}
+          </ul>
         </div>
       </Container>
     </section>
   );
 }
 
-type PillarPanelProps = {
-  tagline: string;
+type PillarCellProps = {
+  area: string;
+  icon: ReactNode;
+  title: string;
   description: string;
-  pointsLabel: string;
-  points: string[];
 };
 
-function PillarPanel({
-  tagline,
-  description,
-  pointsLabel,
-  points,
-}: PillarPanelProps) {
+function PillarCell({ area, icon, title, description }: PillarCellProps) {
   return (
-    <div className="grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-start">
-      <div>
-        <p className="type-caption font-semibold uppercase tracking-wide text-accent">
-          {tagline}
-        </p>
-        <p className="type-body-lg mt-4 text-midnight/82">{description}</p>
+    <li className={cn("min-h-[14rem] list-none", area)}>
+      <div className="relative h-full rounded-[14px] border border-[var(--color-border)] p-2 md:rounded-[16px] md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          borderWidth={2}
+        />
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-surface p-6 md:p-7">
+          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-strong text-midnight">
+            {icon}
+          </div>
+          <div className="space-y-3">
+            <h3 className="text-[20px] font-semibold leading-[1.2] tracking-[-0.4px] text-midnight">
+              {title}
+            </h3>
+            <p className="type-body text-muted">{description}</p>
+          </div>
+        </div>
       </div>
-
-      <div>
-        <p className="type-caption font-semibold uppercase tracking-wide text-midnight">
-          {pointsLabel}
-        </p>
-        <ul className="mt-4 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
-          {points.map((point, index) => (
-            <li
-              key={point}
-              className="flex items-start gap-4 py-4 type-body text-midnight"
-            >
-              <span className="type-caption tabular-nums text-muted">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span className="flex-1">{point}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    </li>
   );
 }

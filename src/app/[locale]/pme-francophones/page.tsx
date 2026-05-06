@@ -1,111 +1,42 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Partners } from "@/components/sections/Partners";
 import { ContactCTA } from "@/components/sections/ContactCTA";
-import { BentoGrid, BentoGridItem } from "@/components/aceternity/bento-grid";
+import { GlowingEffect } from "@/components/aceternity/glowing-effect";
 import { InfiniteMovingCards } from "@/components/aceternity/infinite-moving-cards";
+import {
+  GlobeIcon,
+  MessageIcon,
+  NetworkIcon,
+  ZapIcon,
+} from "@/components/icons";
+import { cn } from "@/lib/utils";
 
-const ADVANTAGE_KEYS = [
-  "francophone",
-  "transfrontalier",
-  "reseau",
-  "reactivite",
+const ADVANTAGES = [
+  {
+    key: "francophone",
+    icon: MessageIcon,
+    area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
+  },
+  {
+    key: "transfrontalier",
+    icon: GlobeIcon,
+    area: "md:[grid-area:1/7/2/13] xl:[grid-area:1/5/3/8]",
+  },
+  {
+    key: "reseau",
+    icon: NetworkIcon,
+    area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/8/2/13]",
+  },
+  {
+    key: "reactivite",
+    icon: ZapIcon,
+    area: "md:[grid-area:2/7/3/13] xl:[grid-area:2/8/3/13]",
+  },
 ] as const;
-
-const ADVANTAGE_SPANS: Record<(typeof ADVANTAGE_KEYS)[number], string> = {
-  francophone: "md:col-span-2",
-  transfrontalier: "md:col-span-1",
-  reseau: "md:col-span-1",
-  reactivite: "md:col-span-2",
-};
-
-const ADVANTAGE_HEADERS: Record<(typeof ADVANTAGE_KEYS)[number], React.ReactNode> = {
-  francophone: (
-    <div
-      aria-hidden
-      className="relative h-24 w-full overflow-hidden rounded-[8px] bg-midnight"
-    >
-      <div className="absolute inset-0 flex items-center justify-around text-paper/30 text-[28px] font-semibold tracking-tight">
-        <span>FR</span>
-        <span aria-hidden className="text-paper/15">↔</span>
-        <span>ES</span>
-      </div>
-      <div className="absolute inset-0 bg-[linear-gradient(115deg,transparent_0%,transparent_45%,rgba(255,255,255,0.18)_50%,transparent_55%,transparent_100%)] bg-[length:200%_100%] [animation:shine_6s_linear_infinite]" />
-    </div>
-  ),
-  transfrontalier: (
-    <div
-      aria-hidden
-      className="relative h-24 w-full overflow-hidden rounded-[8px] bg-surface-strong"
-    >
-      <svg
-        className="absolute inset-0 h-full w-full"
-        viewBox="0 0 200 96"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M 0 70 Q 50 30 100 50 T 200 30"
-          stroke="rgba(37,99,235,0.4)"
-          strokeWidth="1"
-          fill="none"
-        />
-        <path
-          d="M 0 80 Q 60 50 120 60 T 200 50"
-          stroke="rgba(15,23,42,0.18)"
-          strokeWidth="1"
-          fill="none"
-        />
-        <circle cx="0" cy="70" r="2" fill="#2563eb" />
-        <circle cx="200" cy="30" r="2" fill="#2563eb" />
-      </svg>
-    </div>
-  ),
-  reseau: (
-    <div
-      aria-hidden
-      className="relative h-24 w-full overflow-hidden rounded-[8px] bg-surface-strong"
-    >
-      <svg
-        className="absolute inset-0 h-full w-full"
-        viewBox="0 0 200 96"
-        preserveAspectRatio="none"
-      >
-        {[
-          [40, 24],
-          [100, 48],
-          [160, 24],
-          [40, 72],
-          [160, 72],
-        ].map(([cx, cy], i, arr) => (
-          <g key={i}>
-            {arr.slice(i + 1).map(([x2, y2], j) => (
-              <line
-                key={j}
-                x1={cx}
-                y1={cy}
-                x2={x2}
-                y2={y2}
-                stroke="rgba(15,23,42,0.15)"
-                strokeWidth="0.5"
-              />
-            ))}
-            <circle cx={cx} cy={cy} r="3" fill="#2563eb" />
-          </g>
-        ))}
-      </svg>
-    </div>
-  ),
-  reactivite: (
-    <div
-      aria-hidden
-      className="relative h-24 w-full overflow-hidden rounded-[8px] bg-gradient-to-br from-[#2563eb] via-[#3b82f6] to-[#60a5fa]"
-    >
-      <div className="absolute inset-0 [mask-image:linear-gradient(110deg,black_0%,transparent_70%)] bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.4)_1px,transparent_0)] bg-[size:10px_10px]" />
-    </div>
-  ),
-};
 
 const PARTNER_KEYS = [
   "caixabank",
@@ -150,24 +81,17 @@ function PmeContent() {
             {t("advantagesTitle")}
           </h2>
 
-          <div className="mt-12">
-            <BentoGrid>
-              {ADVANTAGE_KEYS.map((key, index) => (
-                <BentoGridItem
-                  key={key}
-                  className={ADVANTAGE_SPANS[key]}
-                  header={ADVANTAGE_HEADERS[key]}
-                  icon={
-                    <span className="inline-flex size-9 items-center justify-center rounded-[6px] bg-midnight text-[13px] font-semibold text-paper">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                  }
-                  title={t(`advantages.${key}.title`)}
-                  description={t(`advantages.${key}.description`)}
-                />
-              ))}
-            </BentoGrid>
-          </div>
+          <ul className="mt-12 grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-2 xl:max-h-[34rem] xl:grid-rows-2">
+            {ADVANTAGES.map(({ key, icon: Icon, area }) => (
+              <AdvantageCell
+                key={key}
+                area={area}
+                icon={<Icon className="size-5" />}
+                title={t(`advantages.${key}.title`)}
+                description={t(`advantages.${key}.description`)}
+              />
+            ))}
+          </ul>
         </Container>
       </section>
 
@@ -195,5 +119,40 @@ function PmeContent() {
       <Partners />
       <ContactCTA />
     </>
+  );
+}
+
+type AdvantageCellProps = {
+  area: string;
+  icon: ReactNode;
+  title: string;
+  description: string;
+};
+
+function AdvantageCell({ area, icon, title, description }: AdvantageCellProps) {
+  return (
+    <li className={cn("min-h-[14rem] list-none", area)}>
+      <div className="relative h-full rounded-[14px] border border-[var(--color-border)] p-2 md:rounded-[16px] md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          borderWidth={2}
+        />
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-surface p-6 md:p-7">
+          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-strong text-midnight">
+            {icon}
+          </div>
+          <div className="space-y-3">
+            <h3 className="text-[20px] font-semibold leading-[1.2] tracking-[-0.4px] text-midnight">
+              {title}
+            </h3>
+            <p className="type-body text-muted">{description}</p>
+          </div>
+        </div>
+      </div>
+    </li>
   );
 }

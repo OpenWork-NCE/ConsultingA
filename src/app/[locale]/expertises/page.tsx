@@ -1,11 +1,26 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import type { ComponentType, ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { ContactCTA } from "@/components/sections/ContactCTA";
-import { CardSpotlight } from "@/components/aceternity/card-spotlight";
+import { GlowingEffect } from "@/components/aceternity/glowing-effect";
+import {
+  BookIcon,
+  BuildingIcon,
+  CalculatorIcon,
+  GavelIcon,
+} from "@/components/icons";
+import { cn } from "@/lib/utils";
 
-const KEYS = ["fiscalite", "comptabilite", "juridique", "collaborations"] as const;
+type ExpertiseKey = "fiscalite" | "comptabilite" | "juridique" | "collaborations";
+
+const EXPERTISES: { key: ExpertiseKey; icon: ComponentType<{ className?: string }> }[] = [
+  { key: "fiscalite", icon: CalculatorIcon },
+  { key: "comptabilite", icon: BookIcon },
+  { key: "juridique", icon: GavelIcon },
+  { key: "collaborations", icon: BuildingIcon },
+];
 
 export default async function ExpertisesPage({
   params,
@@ -29,44 +44,19 @@ function ExpertisesContent() {
       />
 
       <section className="py-20 md:py-28">
-        <Container className="grid gap-6 md:grid-cols-2">
-          {KEYS.map((key, index) => {
+        <Container className="grid gap-6 lg:grid-cols-2">
+          {EXPERTISES.map(({ key, icon: Icon }, index) => {
             const points = t.raw(`items.${key}.points`) as string[];
             return (
-              <CardSpotlight
+              <ExpertiseCard
                 key={key}
-                className="scroll-mt-24 p-8"
-              >
-                <div id={key} className="flex flex-col">
-                  <div className="flex items-center gap-4">
-                    <div className="inline-flex size-10 items-center justify-center rounded-[6px] bg-midnight text-[14px] font-semibold text-paper">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
-                    <h2 className="text-[28px] font-semibold leading-[1.15] tracking-[-0.6px] text-midnight">
-                      {t(`items.${key}.title`)}
-                    </h2>
-                  </div>
-
-                  <p className="type-body mt-6 text-midnight/82">
-                    {t(`items.${key}.summary`)}
-                  </p>
-
-                  <ul className="mt-6 space-y-3">
-                    {points.map((point) => (
-                      <li
-                        key={point}
-                        className="flex items-start gap-3 type-body text-midnight"
-                      >
-                        <span
-                          aria-hidden
-                          className="mt-[10px] size-1.5 shrink-0 rounded-full bg-accent"
-                        />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardSpotlight>
+                id={key}
+                index={index}
+                icon={<Icon className="size-5" />}
+                title={t(`items.${key}.title`)}
+                summary={t(`items.${key}.summary`)}
+                points={points}
+              />
             );
           })}
         </Container>
@@ -74,5 +64,73 @@ function ExpertisesContent() {
 
       <ContactCTA />
     </>
+  );
+}
+
+type ExpertiseCardProps = {
+  id: string;
+  index: number;
+  icon: ReactNode;
+  title: string;
+  summary: string;
+  points: string[];
+};
+
+function ExpertiseCard({
+  id,
+  index,
+  icon,
+  title,
+  summary,
+  points,
+}: ExpertiseCardProps) {
+  return (
+    <div
+      id={id}
+      className={cn(
+        "relative scroll-mt-24 rounded-[14px] border border-[var(--color-border)] p-2 md:rounded-[16px] md:p-3",
+      )}
+    >
+      <GlowingEffect
+        spread={40}
+        glow
+        disabled={false}
+        proximity={64}
+        inactiveZone={0.01}
+        borderWidth={2}
+      />
+      <div className="relative flex h-full flex-col gap-7 overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-surface p-8 md:p-10">
+        <div className="flex items-center justify-between">
+          <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-strong text-midnight">
+            {icon}
+          </div>
+          <span className="type-caption tabular-nums font-medium text-muted">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        </div>
+
+        <div>
+          <h2 className="text-[26px] font-semibold leading-[1.15] tracking-[-0.5px] text-midnight">
+            {title}
+          </h2>
+          <p className="type-body mt-4 text-midnight/82">{summary}</p>
+        </div>
+
+        <ul className="space-y-3 border-t border-[var(--color-border)] pt-6">
+          {points.map((point) => (
+            <li
+              key={point}
+              className="flex items-start gap-3 type-body text-midnight"
+            >
+              <span
+                aria-hidden
+                className="mt-[10px] size-1.5 shrink-0 rounded-full bg-accent"
+              />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

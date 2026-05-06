@@ -1,9 +1,23 @@
 import { useTranslations } from "next-intl";
+import type { ComponentType } from "react";
 import { Container } from "@/components/ui/Container";
 import { Link } from "@/i18n/routing";
 import { GlareCard } from "@/components/aceternity/glare-card";
+import {
+  BookIcon,
+  BuildingIcon,
+  CalculatorIcon,
+  GavelIcon,
+} from "@/components/icons";
 
-const KEYS = ["fiscalite", "comptabilite", "juridique", "collaborations"] as const;
+type ExpertiseKey = "fiscalite" | "comptabilite" | "juridique" | "collaborations";
+
+const EXPERTISES: { key: ExpertiseKey; icon: ComponentType<{ className?: string }> }[] = [
+  { key: "fiscalite", icon: CalculatorIcon },
+  { key: "comptabilite", icon: BookIcon },
+  { key: "juridique", icon: GavelIcon },
+  { key: "collaborations", icon: BuildingIcon },
+];
 
 export function ExpertisesTeaser() {
   const t = useTranslations("ExpertisesTeaser");
@@ -29,13 +43,18 @@ export function ExpertisesTeaser() {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {KEYS.map((key, index) => (
+          {EXPERTISES.map(({ key, icon: Icon }, index) => (
             <GlareCard key={key} className="h-full">
               <div className="flex h-full flex-col p-7">
-                <div className="inline-flex size-10 items-center justify-center rounded-[6px] bg-midnight text-[14px] font-semibold text-paper">
-                  {String(index + 1).padStart(2, "0")}
+                <div className="flex items-center justify-between">
+                  <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-strong text-midnight">
+                    <Icon className="size-5" />
+                  </div>
+                  <span className="type-caption font-medium tabular-nums text-muted">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                 </div>
-                <h3 className="mt-6 text-[20px] font-semibold leading-[1.2] tracking-[-0.4px] text-midnight">
+                <h3 className="mt-7 text-[20px] font-semibold leading-[1.2] tracking-[-0.4px] text-midnight">
                   {tE(`items.${key}.title`)}
                 </h3>
                 <p className="type-body mt-3 text-muted">
