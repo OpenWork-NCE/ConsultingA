@@ -110,15 +110,15 @@ function ContactCell({ icon, label, value, rawValue, note, href }: ContactCellPr
         inactiveZone={0.01}
         borderWidth={2}
       />
-      <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-surface p-6 md:p-7">
-        <div className="inline-flex size-11 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-soft text-midnight">
+      <div className="relative flex h-full min-w-0 flex-col justify-between gap-6 overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-surface p-6 md:p-7">
+        <div className="inline-flex size-11 shrink-0 items-center justify-center rounded-[8px] border border-[var(--color-border)] bg-surface-soft text-midnight">
           {icon}
         </div>
-        <div className="space-y-2">
+        <div className="min-w-0 space-y-2">
           <p className="type-caption font-semibold uppercase tracking-wide text-muted">
             {label}
           </p>
-          <p className="text-[18px] font-semibold leading-[1.3] tracking-[-0.3px] text-midnight md:text-[20px]">
+          <p className="text-[17px] font-semibold leading-[1.35] tracking-[-0.2px] text-midnight [overflow-wrap:anywhere] md:text-[18px]">
             {value}
           </p>
           <p className="type-caption text-muted">{note}</p>

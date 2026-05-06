@@ -33,6 +33,7 @@ export function Header() {
     { href: "/expertises", label: tNav("expertises") },
     { href: "/actualites", label: tNav("actualites") },
     { href: "/pme-francophones", label: tNav("pme") },
+    { href: "/contact", label: tNav("contact") },
   ] as const;
 
   return (

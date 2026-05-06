@@ -36,7 +36,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-[var(--color-border)] mt-24 md:mt-32">
+    <footer className="border-t border-[var(--color-border)] mt-14 md:mt-18">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] md:gap-12 md:py-16">
         <div>
           <Logo

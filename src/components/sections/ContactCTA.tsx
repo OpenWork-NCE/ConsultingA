@@ -9,7 +9,7 @@ export function ContactCTA() {
   const tBrand = useTranslations("Brand");
 
   return (
-    <section className="relative isolate overflow-hidden py-24 md:py-36">
+    <section className="relative isolate overflow-hidden py-14 md:py-16">
       {/* Halo bloom that bleeds out from behind the dark banner. */}
       <div
         aria-hidden
