@@ -83,9 +83,9 @@ export function Footer() {
         ))}
       </Container>
       <div className="border-t border-[var(--color-border)]">
-        <Container className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <Container className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <p className="type-caption text-muted">{t("copyright")}</p>
-          <p className="type-caption text-muted">{t("address")}</p>
+          <p className="type-caption text-muted font-medium">{t("credit")}</p>
         </Container>
       </div>
     </footer>
