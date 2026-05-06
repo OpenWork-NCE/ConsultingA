@@ -31,7 +31,7 @@ export function ExpertisesTeaser() {
         <div className="grid gap-6 mt-16 md:grid-cols-2 lg:grid-cols-4">
           {KEYS.map((key, index) => (
             <Card key={key} className="flex flex-col">
-              <div className="size-10 rounded-[6px] bg-midnight text-white inline-flex items-center justify-center text-[14px] font-semibold">
+              <div className="size-10 rounded-[6px] bg-midnight text-paper inline-flex items-center justify-center text-[14px] font-semibold">
                 {String(index + 1).padStart(2, "0")}
               </div>
               <h3 className="text-midnight mt-6 text-[22px] leading-[1.2] tracking-[-0.4px] font-semibold">

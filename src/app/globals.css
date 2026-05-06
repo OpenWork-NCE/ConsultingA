@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
 /*
+ * Dark variant — applies when the documentElement (or any ancestor) carries
+ * the `dark` class. The ThemeProvider toggles this class manually.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
  * ConsultingADM — Design tokens.
- * The opacity-driven neutrals are all derived from #0f172a so the cool
- * blue-slate palette stays harmonically linked.
+ * Light theme is the canonical DESIGN.md palette. Dark theme inverts the
+ * neutrals while preserving the opacity-driven model and the Vivid Blue accent.
+ *
+ * `--color-midnight` and `--color-paper` are inversed siblings: anywhere we
+ * stack `bg-midnight + text-paper`, the pair flips cleanly when the theme
+ * changes (e.g. CTA banner, glyph chips, secondary buttons).
  */
 @theme {
   --color-background: #f8fafc;
@@ -15,11 +25,7 @@
   --color-accent-ring: rgba(37, 99, 235, 0.5);
 
   --color-midnight: #0f172a;
-  --color-midnight-83: rgba(15, 23, 42, 0.83);
-  --color-midnight-82: rgba(15, 23, 42, 0.82);
-  --color-midnight-40: rgba(15, 23, 42, 0.4);
-  --color-midnight-04: rgba(15, 23, 42, 0.04);
-  --color-midnight-03: rgba(15, 23, 42, 0.03);
+  --color-paper: #ffffff;
 
   --color-border: #e2e8f0;
   --color-border-strong: rgba(15, 23, 42, 0.4);
@@ -38,6 +44,27 @@
   --shadow-focus: rgba(15, 23, 42, 0.1) 0px 4px 12px;
 }
 
+/* Dark theme overrides — semantic tokens flip, the accent stays. */
+:where(.dark) {
+  --color-background: #070b16;
+  --color-surface: #0b1220;
+  --color-surface-strong: #131c2f;
+  --color-foreground: #f1f5f9;
+  --color-muted: #94a3b8;
+
+  --color-midnight: #f1f5f9;
+  --color-paper: #0f172a;
+
+  --color-border: rgba(241, 245, 249, 0.10);
+  --color-border-strong: rgba(241, 245, 249, 0.30);
+
+  --shadow-button-inset:
+    rgba(255, 255, 255, 0.04) 0px 0.5px 0px 0px inset,
+    rgba(0, 0, 0, 0.4) 0px 0px 0px 0.5px inset,
+    rgba(0, 0, 0, 0.3) 0px 1px 2px 0px;
+  --shadow-focus: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+}
+
 html,
 body {
   background: var(--color-background);
@@ -52,11 +79,10 @@ body {
 }
 
 ::selection {
-  background: rgba(37, 99, 235, 0.18);
-  color: var(--color-midnight);
+  background: rgba(37, 99, 235, 0.25);
+  color: var(--color-foreground);
 }
 
-/* Display typography rules from DESIGN.md §3 */
 .type-display {
   font-size: 60px;
   line-height: 1.05;
@@ -111,7 +137,6 @@ body {
   }
 }
 
-/* Focus state — Vivid Blue ring + soft shadow (DESIGN.md §6 Level 3) */
 :where(a, button, [role="button"], input, textarea, select):focus-visible {
   outline: none;
   box-shadow:

@@ -33,8 +33,8 @@ export function LocaleSwitcher() {
             className={cn(
               "h-7 px-3 text-[12px] font-medium uppercase tracking-wide rounded-[9999px] transition-colors",
               active
-                ? "bg-midnight text-white"
-                : "text-midnight hover:bg-midnight-04",
+                ? "bg-midnight text-paper"
+                : "text-midnight hover:bg-midnight/[0.06]",
             )}
           >
             {code}

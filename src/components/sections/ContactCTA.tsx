@@ -11,11 +11,22 @@ export function ContactCTA() {
     <section className="py-24 md:py-32 border-t border-[var(--color-border)]">
       <Container>
         <div className="rounded-[12px] bg-midnight px-10 py-16 md:px-16 md:py-24 flex flex-col items-start">
-          <Logo variant="dark" alt={tBrand("name")} height={36} />
-          <h2 className="type-section text-white max-w-2xl mt-10">
+          <Logo
+            variant="dark"
+            alt={tBrand("name")}
+            height={36}
+            className="dark:hidden"
+          />
+          <Logo
+            variant="light"
+            alt={tBrand("name")}
+            height={36}
+            className="hidden dark:block"
+          />
+          <h2 className="type-section text-paper max-w-2xl mt-10">
             {t("title")}
           </h2>
-          <p className="type-body-lg text-white/80 mt-5 max-w-xl">
+          <p className="type-body-lg text-paper/80 mt-5 max-w-xl">
             {t("subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mt-10">
@@ -26,7 +37,7 @@ export function ContactCTA() {
               href="/expertises"
               variant="ghost"
               size="lg"
-              className="!border-white/30 !text-white hover:!bg-white/10"
+              className="!border-paper/30 !text-paper hover:!bg-paper/10"
             >
               {t("secondaryCta")}
             </LinkButton>

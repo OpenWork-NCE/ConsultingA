@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { Logo } from "@/components/ui/Logo";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 export function Header() {
   const tNav = useTranslations("Nav");
@@ -24,7 +25,20 @@ export function Header() {
           aria-label={tBrand("name")}
           className="inline-flex items-center"
         >
-          <Logo variant="light" alt={tBrand("name")} height={28} priority />
+          <Logo
+            variant="light"
+            alt={tBrand("name")}
+            height={28}
+            priority
+            className="dark:hidden"
+          />
+          <Logo
+            variant="dark"
+            alt={tBrand("name")}
+            height={28}
+            priority
+            className="hidden dark:block"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -40,6 +54,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <LocaleSwitcher />
           <LinkButton
             href="/pme-francophones"

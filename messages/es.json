@@ -3,6 +3,10 @@
     "name": "Despacho de Expertos",
     "tagline": "Excelencia contable y jurídica en Andalucía"
   },
+  "Theme": {
+    "toDark": "Activar el tema oscuro",
+    "toLight": "Activar el tema claro"
+  },
   "Nav": {
     "home": "Inicio",
     "expertises": "Áreas de práctica",

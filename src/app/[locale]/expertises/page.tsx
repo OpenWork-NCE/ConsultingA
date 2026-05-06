@@ -35,7 +35,7 @@ function ExpertisesContent() {
             return (
               <Card key={key} id={key} className="flex flex-col scroll-mt-24">
                 <div className="flex items-center gap-4">
-                  <div className="size-10 rounded-[6px] bg-midnight text-white inline-flex items-center justify-center text-[14px] font-semibold">
+                  <div className="size-10 rounded-[6px] bg-midnight text-paper inline-flex items-center justify-center text-[14px] font-semibold">
                     {String(index + 1).padStart(2, "0")}
                   </div>
                   <h2 className="text-midnight text-[28px] leading-[1.15] tracking-[-0.6px] font-semibold">

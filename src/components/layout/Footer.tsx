@@ -38,7 +38,18 @@ export function Footer() {
     <footer className="border-t border-[var(--color-border)] mt-32">
       <Container className="py-16 grid gap-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
         <div>
-          <Logo variant="light" alt={tBrand("name")} height={32} />
+          <Logo
+            variant="light"
+            alt={tBrand("name")}
+            height={32}
+            className="dark:hidden"
+          />
+          <Logo
+            variant="dark"
+            alt={tBrand("name")}
+            height={32}
+            className="hidden dark:block"
+          />
           <p className="type-body text-muted mt-5 max-w-xs">{t("tagline")}</p>
           <ul className="type-caption text-muted mt-6 space-y-1">
             <li>{t("address")}</li>

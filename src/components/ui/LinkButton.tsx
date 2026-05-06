@@ -14,17 +14,17 @@ type LinkButtonProps = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 font-medium transition-colors duration-150";
+  "inline-flex items-center justify-center gap-2 font-medium transition-[background-color,opacity,color] duration-150";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-accent text-white rounded-[6px] shadow-[var(--shadow-button-inset)] hover:bg-[#1d4ed8]",
+    "bg-accent text-white rounded-[6px] shadow-[var(--shadow-button-inset)] hover:opacity-90",
   secondary:
-    "bg-midnight text-white rounded-[6px] hover:bg-[#1e293b]",
+    "bg-midnight text-paper rounded-[6px] hover:opacity-90",
   ghost:
-    "bg-transparent text-midnight border border-[var(--color-border-strong)] rounded-[6px] hover:bg-midnight-04",
+    "bg-transparent text-midnight border border-[var(--color-border-strong)] rounded-[6px] hover:bg-midnight/[0.06]",
   pill:
-    "bg-midnight text-white rounded-[9999px] hover:bg-[#1e293b]",
+    "bg-midnight text-paper rounded-[9999px] hover:opacity-90",
 };
 
 const sizes: Record<Size, string> = {
