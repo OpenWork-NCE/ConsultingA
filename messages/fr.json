@@ -1,0 +1,240 @@
+{
+  "Brand": {
+    "name": "Cabinet d'Expertise",
+    "tagline": "Excellence comptable & juridique en Andalousie"
+  },
+  "Nav": {
+    "home": "Accueil",
+    "expertises": "Nos expertises",
+    "actualites": "Actualités",
+    "pme": "PME francophones",
+    "contact": "Contact",
+    "cta": "Prendre rendez-vous"
+  },
+  "Hero": {
+    "eyebrow": "Cabinet établi en Andalousie",
+    "title": "Excellence comptable & juridique en Andalousie",
+    "subtitle": "Un cabinet d'expertise-comptable et de conseil juridique de premier plan, alliant rigueur, discrétion et excellence au service de vos enjeux financiers et légaux.",
+    "primaryCta": "Découvrir nos expertises",
+    "secondaryCta": "Nous contacter"
+  },
+  "Stats": {
+    "items": {
+      "experience": { "value": "15+", "label": "Années d'expérience" },
+      "clients": { "value": "200+", "label": "Clients accompagnés" },
+      "jurisdictions": { "value": "3", "label": "Juridictions couvertes" },
+      "satisfaction": { "value": "98 %", "label": "Taux de satisfaction" }
+    }
+  },
+  "About": {
+    "eyebrow": "Qui sommes-nous",
+    "title": "Un cabinet de confiance au cœur de l'Andalousie",
+    "body": "Fondé en Andalousie, notre cabinet d'expertise-comptable et de conseil juridique accompagne une clientèle exigeante dans la gestion de ses enjeux fiscaux, comptables, juridiques et financiers."
+  },
+  "Pillars": {
+    "title": "Nos piliers fondamentaux",
+    "items": {
+      "rigueur": {
+        "title": "Rigueur",
+        "description": "Une méthodologie éprouvée et une attention minutieuse portée à chaque dossier."
+      },
+      "confidentialite": {
+        "title": "Confidentialité",
+        "description": "La discrétion absolue est au cœur de notre pratique."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Un engagement constant envers la qualité et la recherche de solutions sur mesure."
+      },
+      "conformite": {
+        "title": "Conformité",
+        "description": "Une veille permanente sur les évolutions législatives et réglementaires."
+      }
+    }
+  },
+  "Partners": {
+    "eyebrow": "Références institutionnelles",
+    "title": "Une confiance partagée par des institutions de premier plan",
+    "subtitle": "Nous intervenons aux côtés d'institutions publiques, de banques de référence et d'organismes européens et internationaux."
+  },
+  "ExpertisesTeaser": {
+    "eyebrow": "Nos expertises",
+    "title": "Un savoir-faire multidisciplinaire",
+    "subtitle": "Une approche intégrée et rigoureuse, couvrant l'ensemble de vos besoins comptables, fiscaux, juridiques et institutionnels.",
+    "viewAll": "Voir toutes nos expertises"
+  },
+  "Expertises": {
+    "pageEyebrow": "Nos expertises",
+    "pageTitle": "Un savoir-faire multidisciplinaire",
+    "pageSubtitle": "Une approche intégrée et rigoureuse, au service de vos enjeux financiers et légaux. Chaque mission s'appuie sur une équipe pluridisciplinaire et une connaissance fine des cadres franco-espagnols.",
+    "items": {
+      "fiscalite": {
+        "title": "Fiscalité",
+        "summary": "Conseil fiscal stratégique, planification, optimisation, déclarations et contentieux. Expertise transfrontalière franco-espagnole.",
+        "points": [
+          "Conseil fiscal stratégique et planification",
+          "Optimisation et déclarations fiscales",
+          "Fiscalité internationale et conventions",
+          "Contentieux fiscaux et représentation"
+        ]
+      },
+      "comptabilite": {
+        "title": "Comptabilité",
+        "summary": "Tenue de comptes, audit, révision, états financiers et reporting de gestion.",
+        "points": [
+          "Tenue de comptes et écritures",
+          "Audit et révision comptable",
+          "Établissement des états financiers",
+          "Reporting de gestion et tableaux de bord"
+        ]
+      },
+      "juridique": {
+        "title": "Juridique & légal",
+        "summary": "Droit des sociétés, conformité réglementaire, rédaction contractuelle et assistance juridique.",
+        "points": [
+          "Droit des sociétés et gouvernance",
+          "Conformité réglementaire",
+          "Rédaction et négociation contractuelle",
+          "Assistance juridique aux entreprises en Espagne"
+        ]
+      },
+      "collaborations": {
+        "title": "Collaborations institutionnelles",
+        "summary": "Représentation devant les tribunaux, relations administratives et coopération avec les organismes européens.",
+        "points": [
+          "Représentation judiciaire",
+          "Relations avec les administrations publiques",
+          "Liaison avec les organismes européens",
+          "Coopération internationale"
+        ]
+      }
+    }
+  },
+  "News": {
+    "pageEyebrow": "Actualités légales",
+    "pageTitle": "Veille juridique & fiscale",
+    "pageSubtitle": "Une sélection d'analyses signées par le cabinet, sur les évolutions législatives et réglementaires qui concernent nos clients.",
+    "teaserEyebrow": "Actualités",
+    "teaserTitle": "Dernières analyses du cabinet",
+    "teaserViewAll": "Voir toutes les actualités",
+    "readMore": "Lire l'analyse",
+    "items": {
+      "obligations-fiscales-2026": {
+        "date": "15 février 2026",
+        "category": "Fiscalité",
+        "title": "Nouvelles obligations fiscales pour les entreprises en Espagne 2026",
+        "excerpt": "Le gouvernement espagnol a introduit de nouvelles obligations déclaratives pour les entreprises opérant sur le territoire national. Tour d'horizon des changements majeurs."
+      },
+      "implantation-pme-andalousie": {
+        "date": "20 janvier 2026",
+        "category": "PME francophones",
+        "title": "Guide pratique : implantation d'une PME française en Andalousie",
+        "excerpt": "Les étapes clés et les points de vigilance pour réussir l'implantation de votre PME en Andalousie. Aspects fiscaux, juridiques et administratifs."
+      },
+      "reforme-droit-societes": {
+        "date": "5 janvier 2026",
+        "category": "Juridique",
+        "title": "Réforme du droit des sociétés espagnol : ce qui change",
+        "excerpt": "Analyse des modifications apportées au droit des sociétés espagnol et leurs implications pour les entreprises étrangères."
+      }
+    }
+  },
+  "PME": {
+    "pageEyebrow": "PME francophones",
+    "pageTitle": "Un accompagnement dédié aux PME francophones en Espagne",
+    "pageSubtitle": "Le cabinet accompagne les PME francophones établies ou en cours d'implantation en Espagne, avec un interlocuteur dédié et une communication en français.",
+    "advantagesTitle": "Pourquoi nous confier votre dossier",
+    "advantages": {
+      "francophone": {
+        "title": "Interlocuteur francophone",
+        "description": "Un interlocuteur francophone dédié pour faciliter vos échanges et votre compréhension des obligations légales espagnoles."
+      },
+      "transfrontalier": {
+        "title": "Expertise transfrontalière",
+        "description": "Une connaissance approfondie des spécificités fiscales et juridiques franco-espagnoles pour sécuriser votre implantation."
+      },
+      "reseau": {
+        "title": "Réseau de partenaires",
+        "description": "Un réseau de partenaires de confiance — banques, notaires, avocats — pour vous accompagner dans toutes vos démarches."
+      },
+      "reactivite": {
+        "title": "Cabinet à taille humaine",
+        "description": "Un cabinet à taille humaine, réactif et disponible, pour un suivi personnalisé de votre dossier."
+      }
+    },
+    "partnersTitle": "Notre réseau de partenaires",
+    "partnersSubtitle": "Banques, cabinets d'audit, études notariales et chambres consulaires : un écosystème éprouvé pour faciliter votre installation et la gestion quotidienne de votre activité.",
+    "partnersList": {
+      "caixabank": { "name": "CaixaBank", "type": "Banque" },
+      "santander": { "name": "Santander", "type": "Banque" },
+      "deloitte": { "name": "Deloitte España", "type": "Audit" },
+      "garrigues": { "name": "Garrigues", "type": "Conseil juridique" },
+      "notaria": { "name": "Notaría de Málaga", "type": "Étude notariale" },
+      "ccfe": { "name": "Chambre de Commerce Franco-Espagnole", "type": "Chambre consulaire" }
+    }
+  },
+  "ContactCTA": {
+    "title": "Discutons de votre dossier en toute confidentialité.",
+    "subtitle": "Un premier échange permet de cadrer votre besoin et de vous orienter vers la prise en charge la plus adaptée.",
+    "primaryCta": "Prendre rendez-vous",
+    "secondaryCta": "Voir nos expertises"
+  },
+  "Legal": {
+    "pageEyebrow": "Mentions légales",
+    "pageTitle": "Mentions légales & politique de confidentialité",
+    "lastUpdate": "Dernière mise à jour : janvier 2026",
+    "sections": {
+      "editor": {
+        "title": "Éditeur du site",
+        "body": "Le présent site est édité par le Cabinet d'Expertise, dont le siège est situé à Málaga, Andalousie, Espagne. Pour toute question relative au présent site, vous pouvez nous joindre à l'adresse contact@cabinet-expertise.com."
+      },
+      "host": {
+        "title": "Hébergement",
+        "body": "Le site est hébergé sur l'infrastructure de Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis."
+      },
+      "ip": {
+        "title": "Propriété intellectuelle",
+        "body": "L'ensemble des contenus présents sur ce site — textes, marques, logos, identité visuelle — est protégé par le droit d'auteur et le droit des marques. Toute reproduction non autorisée est strictement interdite."
+      },
+      "data": {
+        "title": "Données personnelles",
+        "body": "Les données collectées via les formulaires de contact sont traitées dans le strict respect du Règlement (UE) 2016/679 (RGPD). Conformément à la réglementation, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition que vous pouvez exercer à l'adresse contact@cabinet-expertise.com."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "Le site n'utilise que les cookies strictement nécessaires à son fonctionnement. Aucun cookie publicitaire ou de mesure d'audience tiers n'est déposé sans votre consentement explicite."
+      },
+      "law": {
+        "title": "Droit applicable",
+        "body": "Les présentes mentions sont régies par le droit espagnol. Tout litige relatif à l'usage de ce site relève de la compétence exclusive des juridictions de Málaga, Espagne."
+      }
+    }
+  },
+  "Footer": {
+    "tagline": "Cabinet d'expertise-comptable & conseil juridique au service d'une clientèle exigeante en Andalousie.",
+    "address": "Málaga, Andalousie, Espagne",
+    "phone": "+34 000 000 000",
+    "email": "contact@cabinet-expertise.com",
+    "columns": {
+      "expertises": {
+        "title": "Expertises",
+        "fiscalite": "Fiscalité",
+        "comptabilite": "Comptabilité",
+        "juridique": "Juridique & légal",
+        "collaborations": "Collaborations institutionnelles"
+      },
+      "cabinet": {
+        "title": "Cabinet",
+        "about": "Qui sommes-nous",
+        "actualites": "Actualités",
+        "pme": "PME francophones"
+      },
+      "legal": {
+        "title": "Informations",
+        "mentions": "Mentions légales",
+        "privacy": "Politique de confidentialité"
+      }
+    },
+    "copyright": "© 2026 Cabinet d'Expertise. Tous droits réservés."
+  }
+}

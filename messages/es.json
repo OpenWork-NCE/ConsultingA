@@ -1,0 +1,240 @@
+{
+  "Brand": {
+    "name": "Despacho de Expertos",
+    "tagline": "Excelencia contable y jurídica en Andalucía"
+  },
+  "Nav": {
+    "home": "Inicio",
+    "expertises": "Áreas de práctica",
+    "actualites": "Actualidad legal",
+    "pme": "PYMES francófonas",
+    "contact": "Contacto",
+    "cta": "Solicitar cita"
+  },
+  "Hero": {
+    "eyebrow": "Despacho establecido en Andalucía",
+    "title": "Excelencia contable y jurídica en Andalucía",
+    "subtitle": "Un despacho de expertos contables y asesoría jurídica de primer nivel, que combina rigor, discreción y excelencia al servicio de sus retos financieros y legales.",
+    "primaryCta": "Descubrir nuestras áreas",
+    "secondaryCta": "Contactar"
+  },
+  "Stats": {
+    "items": {
+      "experience": { "value": "15+", "label": "Años de experiencia" },
+      "clients": { "value": "200+", "label": "Clientes acompañados" },
+      "jurisdictions": { "value": "3", "label": "Jurisdicciones cubiertas" },
+      "satisfaction": { "value": "98 %", "label": "Tasa de satisfacción" }
+    }
+  },
+  "About": {
+    "eyebrow": "Quiénes somos",
+    "title": "Un despacho de confianza en el corazón de Andalucía",
+    "body": "Fundado en Andalucía, nuestro despacho de expertos contables y asesoría jurídica acompaña a una clientela exigente en la gestión de sus retos fiscales, contables, jurídicos y financieros."
+  },
+  "Pillars": {
+    "title": "Nuestros pilares fundamentales",
+    "items": {
+      "rigueur": {
+        "title": "Rigor",
+        "description": "Una metodología contrastada y una atención meticulosa a cada expediente."
+      },
+      "confidentialite": {
+        "title": "Confidencialidad",
+        "description": "La discreción absoluta es el núcleo de nuestra práctica."
+      },
+      "excellence": {
+        "title": "Excelencia",
+        "description": "Un compromiso constante con la calidad y la búsqueda de soluciones a medida."
+      },
+      "conformite": {
+        "title": "Cumplimiento",
+        "description": "Una vigilancia permanente de las evoluciones legislativas y reglamentarias."
+      }
+    }
+  },
+  "Partners": {
+    "eyebrow": "Referencias institucionales",
+    "title": "La confianza de instituciones de primer nivel",
+    "subtitle": "Colaboramos con instituciones públicas, bancos de referencia y organismos europeos e internacionales."
+  },
+  "ExpertisesTeaser": {
+    "eyebrow": "Áreas de práctica",
+    "title": "Un saber hacer multidisciplinar",
+    "subtitle": "Un enfoque integrado y riguroso, que cubre el conjunto de sus necesidades contables, fiscales, jurídicas e institucionales.",
+    "viewAll": "Ver todas las áreas"
+  },
+  "Expertises": {
+    "pageEyebrow": "Áreas de práctica",
+    "pageTitle": "Un saber hacer multidisciplinar",
+    "pageSubtitle": "Un enfoque integrado y riguroso, al servicio de sus retos financieros y legales. Cada misión se apoya en un equipo pluridisciplinar y un conocimiento profundo de los marcos franco-españoles.",
+    "items": {
+      "fiscalite": {
+        "title": "Fiscalidad",
+        "summary": "Asesoramiento fiscal estratégico, planificación, optimización, declaraciones y contencioso. Experiencia transfronteriza franco-española.",
+        "points": [
+          "Asesoramiento fiscal estratégico y planificación",
+          "Optimización y declaraciones fiscales",
+          "Fiscalidad internacional y convenios",
+          "Contencioso fiscal y representación"
+        ]
+      },
+      "comptabilite": {
+        "title": "Contabilidad",
+        "summary": "Llevanza contable, auditoría, revisión, estados financieros y reporting de gestión.",
+        "points": [
+          "Llevanza contable y registros",
+          "Auditoría y revisión contable",
+          "Elaboración de estados financieros",
+          "Reporting de gestión y cuadros de mando"
+        ]
+      },
+      "juridique": {
+        "title": "Jurídico y legal",
+        "summary": "Derecho societario, cumplimiento normativo, redacción contractual y asistencia jurídica.",
+        "points": [
+          "Derecho societario y gobierno corporativo",
+          "Cumplimiento normativo",
+          "Redacción y negociación contractual",
+          "Asistencia jurídica a empresas en España"
+        ]
+      },
+      "collaborations": {
+        "title": "Colaboraciones institucionales",
+        "summary": "Representación ante los tribunales, relaciones administrativas y cooperación con organismos europeos.",
+        "points": [
+          "Representación judicial",
+          "Relaciones con las administraciones públicas",
+          "Enlace con organismos europeos",
+          "Cooperación internacional"
+        ]
+      }
+    }
+  },
+  "News": {
+    "pageEyebrow": "Actualidad legal",
+    "pageTitle": "Vigilancia jurídica y fiscal",
+    "pageSubtitle": "Una selección de análisis firmados por el despacho, sobre las evoluciones legislativas y reglamentarias que afectan a nuestros clientes.",
+    "teaserEyebrow": "Actualidad",
+    "teaserTitle": "Últimos análisis del despacho",
+    "teaserViewAll": "Ver toda la actualidad",
+    "readMore": "Leer el análisis",
+    "items": {
+      "obligations-fiscales-2026": {
+        "date": "15 de febrero de 2026",
+        "category": "Fiscalidad",
+        "title": "Nuevas obligaciones fiscales para las empresas en España 2026",
+        "excerpt": "El gobierno español ha introducido nuevas obligaciones declarativas para las empresas que operan en territorio nacional. Repaso de los principales cambios."
+      },
+      "implantation-pme-andalousie": {
+        "date": "20 de enero de 2026",
+        "category": "PYMES francófonas",
+        "title": "Guía práctica: implantación de una PYME francesa en Andalucía",
+        "excerpt": "Las etapas clave y los puntos críticos para implantar con éxito su PYME en Andalucía. Aspectos fiscales, jurídicos y administrativos."
+      },
+      "reforme-droit-societes": {
+        "date": "5 de enero de 2026",
+        "category": "Jurídico",
+        "title": "Reforma del derecho societario español: lo que cambia",
+        "excerpt": "Análisis de las modificaciones introducidas en el derecho societario español y sus implicaciones para las empresas extranjeras."
+      }
+    }
+  },
+  "PME": {
+    "pageEyebrow": "PYMES francófonas",
+    "pageTitle": "Un acompañamiento dedicado a las PYMES francófonas en España",
+    "pageSubtitle": "El despacho acompaña a las PYMES francófonas establecidas o en proceso de implantación en España, con un interlocutor dedicado y comunicación en francés.",
+    "advantagesTitle": "Por qué confiarnos su expediente",
+    "advantages": {
+      "francophone": {
+        "title": "Interlocutor francófono",
+        "description": "Un interlocutor francófono dedicado para facilitar sus intercambios y la comprensión de las obligaciones legales españolas."
+      },
+      "transfrontalier": {
+        "title": "Experiencia transfronteriza",
+        "description": "Un conocimiento profundo de las particularidades fiscales y jurídicas franco-españolas para asegurar su implantación."
+      },
+      "reseau": {
+        "title": "Red de socios",
+        "description": "Una red de socios de confianza — bancos, notarías, abogados — para acompañarle en todos sus trámites."
+      },
+      "reactivite": {
+        "title": "Despacho de tamaño humano",
+        "description": "Un despacho de tamaño humano, reactivo y disponible, para un seguimiento personalizado de su expediente."
+      }
+    },
+    "partnersTitle": "Nuestra red de socios",
+    "partnersSubtitle": "Bancos, firmas de auditoría, notarías y cámaras consulares: un ecosistema contrastado para facilitar su instalación y la gestión diaria de su actividad.",
+    "partnersList": {
+      "caixabank": { "name": "CaixaBank", "type": "Banco" },
+      "santander": { "name": "Santander", "type": "Banco" },
+      "deloitte": { "name": "Deloitte España", "type": "Auditoría" },
+      "garrigues": { "name": "Garrigues", "type": "Asesoría jurídica" },
+      "notaria": { "name": "Notaría de Málaga", "type": "Notaría" },
+      "ccfe": { "name": "Cámara de Comercio Franco-Española", "type": "Cámara consular" }
+    }
+  },
+  "ContactCTA": {
+    "title": "Hablemos de su expediente con total confidencialidad.",
+    "subtitle": "Una primera conversación permite delimitar su necesidad y orientarle hacia la mejor forma de gestionarla.",
+    "primaryCta": "Solicitar cita",
+    "secondaryCta": "Ver nuestras áreas"
+  },
+  "Legal": {
+    "pageEyebrow": "Aviso legal",
+    "pageTitle": "Aviso legal y política de privacidad",
+    "lastUpdate": "Última actualización: enero de 2026",
+    "sections": {
+      "editor": {
+        "title": "Editor del sitio",
+        "body": "El presente sitio es editado por el Despacho de Expertos, con sede en Málaga, Andalucía, España. Para cualquier cuestión relativa a este sitio, puede contactarnos en contact@cabinet-expertise.com."
+      },
+      "host": {
+        "title": "Alojamiento",
+        "body": "El sitio está alojado en la infraestructura de Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, Estados Unidos."
+      },
+      "ip": {
+        "title": "Propiedad intelectual",
+        "body": "El conjunto de los contenidos presentes en este sitio — textos, marcas, logotipos, identidad visual — está protegido por los derechos de autor y el derecho de marcas. Queda estrictamente prohibida toda reproducción no autorizada."
+      },
+      "data": {
+        "title": "Datos personales",
+        "body": "Los datos recogidos a través de los formularios de contacto se tratan en estricto cumplimiento del Reglamento (UE) 2016/679 (RGPD). Conforme a la normativa, dispone de un derecho de acceso, rectificación, supresión y oposición que puede ejercer en contact@cabinet-expertise.com."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "El sitio sólo utiliza las cookies estrictamente necesarias para su funcionamiento. No se instala ninguna cookie publicitaria o de analítica de terceros sin su consentimiento explícito."
+      },
+      "law": {
+        "title": "Ley aplicable",
+        "body": "El presente aviso se rige por el derecho español. Cualquier litigio relativo al uso de este sitio será competencia exclusiva de los juzgados y tribunales de Málaga, España."
+      }
+    }
+  },
+  "Footer": {
+    "tagline": "Despacho de expertos contables y asesoría jurídica al servicio de una clientela exigente en Andalucía.",
+    "address": "Málaga, Andalucía, España",
+    "phone": "+34 000 000 000",
+    "email": "contact@cabinet-expertise.com",
+    "columns": {
+      "expertises": {
+        "title": "Áreas",
+        "fiscalite": "Fiscalidad",
+        "comptabilite": "Contabilidad",
+        "juridique": "Jurídico y legal",
+        "collaborations": "Colaboraciones institucionales"
+      },
+      "cabinet": {
+        "title": "Despacho",
+        "about": "Quiénes somos",
+        "actualites": "Actualidad",
+        "pme": "PYMES francófonas"
+      },
+      "legal": {
+        "title": "Información",
+        "mentions": "Aviso legal",
+        "privacy": "Política de privacidad"
+      }
+    },
+    "copyright": "© 2026 Despacho de Expertos. Todos los derechos reservados."
+  }
+}

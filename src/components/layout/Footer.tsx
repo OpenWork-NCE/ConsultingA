@@ -1,0 +1,81 @@
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/ui/Logo";
+
+export function Footer() {
+  const t = useTranslations("Footer");
+  const tBrand = useTranslations("Brand");
+
+  const columns = [
+    {
+      title: t("columns.expertises.title"),
+      items: [
+        { href: "/expertises#fiscalite", label: t("columns.expertises.fiscalite") },
+        { href: "/expertises#comptabilite", label: t("columns.expertises.comptabilite") },
+        { href: "/expertises#juridique", label: t("columns.expertises.juridique") },
+        { href: "/expertises#collaborations", label: t("columns.expertises.collaborations") },
+      ],
+    },
+    {
+      title: t("columns.cabinet.title"),
+      items: [
+        { href: "/", label: t("columns.cabinet.about") },
+        { href: "/actualites", label: t("columns.cabinet.actualites") },
+        { href: "/pme-francophones", label: t("columns.cabinet.pme") },
+      ],
+    },
+    {
+      title: t("columns.legal.title"),
+      items: [
+        { href: "/mentions-legales", label: t("columns.legal.mentions") },
+        { href: "/mentions-legales#donnees-personnelles", label: t("columns.legal.privacy") },
+      ],
+    },
+  ];
+
+  return (
+    <footer className="border-t border-[var(--color-border)] mt-32">
+      <Container className="py-16 grid gap-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
+        <div>
+          <Logo variant="light" alt={tBrand("name")} height={32} />
+          <p className="type-body text-muted mt-5 max-w-xs">{t("tagline")}</p>
+          <ul className="type-caption text-muted mt-6 space-y-1">
+            <li>{t("address")}</li>
+            <li>{t("phone")}</li>
+            <li>
+              <a href={`mailto:${t("email")}`} className="hover:text-midnight">
+                {t("email")}
+              </a>
+            </li>
+          </ul>
+        </div>
+        {columns.map((col) => (
+          <div key={col.title}>
+            <h4 className="type-caption font-semibold text-midnight uppercase tracking-wide">
+              {col.title}
+            </h4>
+            <ul className="mt-4 space-y-3">
+              {col.items.map((item) => (
+                <li key={item.href + item.label}>
+                  <Link
+                    href={item.href}
+                    className="type-body text-midnight/82 hover:text-midnight"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </Container>
+      <div className="border-t border-[var(--color-border)]">
+        <Container className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="type-caption text-muted">{t("copyright")}</p>
+          <p className="type-caption text-muted">{t("address")}</p>
+        </Container>
+      </div>
+    </footer>
+  );
+}
