@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import type { ComponentType, ReactNode } from "react";
@@ -41,9 +42,31 @@ function ExpertisesContent() {
         eyebrow={t("pageEyebrow")}
         title={t("pageTitle")}
         subtitle={t("pageSubtitle")}
+        imageSrc="/assets/Image_Site_1.jpg"
       />
 
-      <section className="py-20 md:py-28">
+      {/* Editorial visual — pluridisciplinary team, signals the
+          "savoir-faire multidisciplinaire" promise of the page. */}
+      <section className="pt-12 md:pt-16">
+        <Container>
+          <div className="relative aspect-[16/7] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] sm:aspect-[16/6] md:aspect-[16/5]">
+            <Image
+              src="/assets/Image_Site_4.jpg"
+              alt=""
+              fill
+              sizes="(min-width: 1280px) 1200px, 100vw"
+              className="object-cover"
+              priority
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-r from-midnight/40 via-midnight/10 to-transparent"
+            />
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 md:py-24">
         <Container className="grid gap-6 lg:grid-cols-2">
           {EXPERTISES.map(({ key, icon: Icon }, index) => {
             const points = t.raw(`items.${key}.points`) as string[];

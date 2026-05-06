@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Spotlight } from "@/components/aceternity/spotlight";
 
@@ -5,16 +6,48 @@ type PageHeaderProps = {
   eyebrow: string;
   title: string;
   subtitle?: string;
+  /**
+   * Optional photographic backdrop. When provided, the header gains the same
+   * four-layer treatment as the home Hero (image → wash → bottom-fade →
+   * dot grid + Spotlight) so feature pages feel of one family.
+   */
+  imageSrc?: string;
 };
 
-/**
- * Page header for inner routes — Hero-family atmosphere (Spotlight + dot
- * grid) but lighter than the home Hero. Uses `bg-grid-pattern` masked to a
- * top-anchored ellipse so the texture fades cleanly into the page body.
- */
-export function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps) {
+export function PageHeader({
+  eyebrow,
+  title,
+  subtitle,
+  imageSrc,
+}: PageHeaderProps) {
   return (
     <section className="relative isolate overflow-hidden border-b border-[var(--color-border)] pt-24 pb-16 md:pt-32 md:pb-24">
+      {imageSrc ? (
+        <>
+          {/* Layer -2 — full-bleed photographic backdrop. */}
+          <div aria-hidden className="absolute inset-0 -z-30">
+            <Image
+              src={imageSrc}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          </div>
+
+          {/* Layer -1 — wash + bottom fade so type stays legible. */}
+          <div
+            aria-hidden
+            className="absolute inset-0 -z-20 bg-background/82 dark:bg-background/88"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 -z-20 bg-gradient-to-b from-background/0 via-background/40 to-background"
+          />
+        </>
+      ) : null}
+
       <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-60"
         fill="#2563eb"

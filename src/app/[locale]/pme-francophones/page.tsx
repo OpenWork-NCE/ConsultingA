@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
@@ -73,15 +74,39 @@ function PmeContent() {
         eyebrow={t("pageEyebrow")}
         title={t("pageTitle")}
         subtitle={t("pageSubtitle")}
+        imageSrc="/assets/Image_Site_2.jpg"
       />
 
       <section className="py-20 md:py-28">
         <Container>
-          <h2 className="type-sub max-w-2xl text-midnight">
-            {t("advantagesTitle")}
-          </h2>
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+            {/* Editorial image — Spanish-flag-bearing professionals,
+                signals the FR-ES bridge that defines this practice. */}
+            <div className="relative aspect-[5/4] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] lg:order-1">
+              <Image
+                src="/assets/Image_Site_5.jpg"
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-tl from-midnight/30 via-transparent to-transparent"
+              />
+            </div>
 
-          <ul className="mt-12 grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-2 xl:max-h-[34rem] xl:grid-rows-2">
+            <div className="lg:order-0 max-w-2xl">
+              <h2 className="type-sub text-midnight">
+                {t("advantagesTitle")}
+              </h2>
+              <p className="type-body-lg mt-6 text-midnight/82">
+                {t("pageSubtitle")}
+              </p>
+            </div>
+          </div>
+
+          <ul className="mt-16 grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-2 xl:max-h-[34rem] xl:grid-rows-2">
             {ADVANTAGES.map(({ key, icon: Icon, area }) => (
               <AdvantageCell
                 key={key}

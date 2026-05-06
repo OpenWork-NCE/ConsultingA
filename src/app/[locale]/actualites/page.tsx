@@ -32,6 +32,7 @@ function ActualitesContent() {
         eyebrow={t("pageEyebrow")}
         title={t("pageTitle")}
         subtitle={t("pageSubtitle")}
+        imageSrc="/assets/Image_Site_3.jpg"
       />
 
       <section className="py-20 md:py-28">
