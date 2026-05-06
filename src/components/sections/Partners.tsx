@@ -1,35 +1,49 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
+import { AnimatedTooltip } from "@/components/aceternity/animated-tooltip";
 
 const PARTNERS = [
   {
-    name: "Tribunal de Justicia de Málaga & Cádiz",
-    logo: "/assets/logos-of-partners/Escudo_de_Andalucía_tribunal_Málaga et C.png",
+    id: "tribunal",
+    name: "Tribunal de Justicia",
+    designation: "Málaga & Cádiz",
+    image:
+      "/assets/logos-of-partners/Escudo_de_Andalucía_tribunal_Málaga et C.png",
   },
   {
-    name: "CaixaBank Andalucía",
-    logo: "/assets/logos-of-partners/CaixaBank_logo.png",
+    id: "caixabank",
+    name: "CaixaBank",
+    designation: "Andalucía",
+    image: "/assets/logos-of-partners/CaixaBank_logo.png",
   },
   {
-    name: "CMB Monaco International",
-    logo: "/assets/logos-of-partners/CMB_MONACO.png",
+    id: "cmb",
+    name: "CMB Monaco",
+    designation: "International",
+    image: "/assets/logos-of-partners/CMB_MONACO.png",
   },
   {
+    id: "embajada",
     name: "Embajada de España",
-    logo: "/assets/logos-of-partners/embajada-de-espana-en-peru-seeklogo.png",
+    image:
+      "/assets/logos-of-partners/embajada-de-espana-en-peru-seeklogo.png",
   },
   {
+    id: "eu",
     name: "Union Européenne",
-    logo: "/assets/logos-of-partners/european-union-logo.png",
+    image: "/assets/logos-of-partners/european-union-logo.png",
   },
   {
-    name: "Zurich Andalucía",
-    logo: "/assets/logos-of-partners/ZURICH_Andalucia_logos.png",
+    id: "zurich",
+    name: "Zurich",
+    designation: "Andalucía",
+    image: "/assets/logos-of-partners/ZURICH_Andalucia_logos.png",
   },
   {
+    id: "hacienda",
     name: "Ministerio de Hacienda",
-    logo: "/assets/logos-of-partners/Logotipo_del_Ministerio_de_Hacienda.png",
+    image:
+      "/assets/logos-of-partners/Logotipo_del_Ministerio_de_Hacienda.png",
   },
 ];
 
@@ -37,34 +51,19 @@ export function Partners() {
   const t = useTranslations("Partners");
 
   return (
-    <section className="py-24 md:py-32 border-t border-[var(--color-border)]">
+    <section className="border-t border-[var(--color-border)] py-24 md:py-32">
       <Container>
         <div className="max-w-2xl">
-          <p className="type-caption text-accent uppercase tracking-wide font-semibold">
+          <p className="type-caption font-semibold uppercase tracking-wide text-accent">
             {t("eyebrow")}
           </p>
-          <h2 className="type-section text-midnight mt-3">{t("title")}</h2>
-          <p className="type-body-lg text-midnight/82 mt-5">{t("subtitle")}</p>
+          <h2 className="type-section mt-3 text-midnight">{t("title")}</h2>
+          <p className="type-body-lg mt-5 text-midnight/82">{t("subtitle")}</p>
         </div>
 
-        <ul className="grid gap-px mt-16 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 bg-[var(--color-border)] border border-[var(--color-border)] rounded-[12px] overflow-hidden">
-          {PARTNERS.map((partner) => (
-            <li
-              key={partner.name}
-              className="bg-surface-strong h-32 flex items-center justify-center px-6"
-            >
-              <div className="relative h-14 w-full">
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  fill
-                  sizes="(min-width: 1024px) 200px, (min-width: 640px) 30vw, 45vw"
-                  className="object-contain"
-                />
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-16 grid grid-cols-2 items-center gap-x-6 gap-y-2 sm:grid-cols-3 lg:grid-cols-7">
+          <AnimatedTooltip items={PARTNERS} />
+        </div>
       </Container>
     </section>
   );

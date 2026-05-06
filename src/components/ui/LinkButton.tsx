@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "@/i18n/routing";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 type Variant = "primary" | "secondary" | "ghost" | "pill";
 type Size = "md" | "lg";

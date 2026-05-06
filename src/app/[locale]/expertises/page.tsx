@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
-import { Card } from "@/components/ui/Card";
 import { PageHeader } from "@/components/PageHeader";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { CardSpotlight } from "@/components/aceternity/card-spotlight";
 
 const KEYS = ["fiscalite", "comptabilite", "juridique", "collaborations"] as const;
 
@@ -33,35 +33,40 @@ function ExpertisesContent() {
           {KEYS.map((key, index) => {
             const points = t.raw(`items.${key}.points`) as string[];
             return (
-              <Card key={key} id={key} className="flex flex-col scroll-mt-24">
-                <div className="flex items-center gap-4">
-                  <div className="size-10 rounded-[6px] bg-midnight text-paper inline-flex items-center justify-center text-[14px] font-semibold">
-                    {String(index + 1).padStart(2, "0")}
+              <CardSpotlight
+                key={key}
+                className="scroll-mt-24 p-8"
+              >
+                <div id={key} className="flex flex-col">
+                  <div className="flex items-center gap-4">
+                    <div className="inline-flex size-10 items-center justify-center rounded-[6px] bg-midnight text-[14px] font-semibold text-paper">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <h2 className="text-[28px] font-semibold leading-[1.15] tracking-[-0.6px] text-midnight">
+                      {t(`items.${key}.title`)}
+                    </h2>
                   </div>
-                  <h2 className="text-midnight text-[28px] leading-[1.15] tracking-[-0.6px] font-semibold">
-                    {t(`items.${key}.title`)}
-                  </h2>
+
+                  <p className="type-body mt-6 text-midnight/82">
+                    {t(`items.${key}.summary`)}
+                  </p>
+
+                  <ul className="mt-6 space-y-3">
+                    {points.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 type-body text-midnight"
+                      >
+                        <span
+                          aria-hidden
+                          className="mt-[10px] size-1.5 shrink-0 rounded-full bg-accent"
+                        />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <p className="type-body text-midnight/82 mt-6">
-                  {t(`items.${key}.summary`)}
-                </p>
-
-                <ul className="mt-6 space-y-3">
-                  {points.map((point) => (
-                    <li
-                      key={point}
-                      className="type-body text-midnight flex gap-3 items-start"
-                    >
-                      <span
-                        aria-hidden
-                        className="mt-[10px] size-1.5 rounded-full bg-accent shrink-0"
-                      />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+              </CardSpotlight>
             );
           })}
         </Container>

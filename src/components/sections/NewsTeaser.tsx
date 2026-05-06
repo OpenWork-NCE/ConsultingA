@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Link } from "@/i18n/routing";
+import { InfiniteMovingCards } from "@/components/aceternity/infinite-moving-cards";
 
 const KEYS = [
   "obligations-fiscales-2026",
@@ -11,15 +12,24 @@ const KEYS = [
 export function NewsTeaser() {
   const t = useTranslations("News");
 
+  const items = KEYS.map((key) => ({
+    id: key,
+    category: t(`items.${key}.category`),
+    date: t(`items.${key}.date`),
+    title: t(`items.${key}.title`),
+    excerpt: t(`items.${key}.excerpt`),
+    cta: t("readMore"),
+  }));
+
   return (
-    <section className="py-24 md:py-32 border-t border-[var(--color-border)]">
+    <section className="border-t border-[var(--color-border)] py-24 md:py-32">
       <Container>
-        <div className="flex items-end justify-between flex-wrap gap-6">
+        <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <p className="type-caption text-accent uppercase tracking-wide font-semibold">
+            <p className="type-caption font-semibold uppercase tracking-wide text-accent">
               {t("teaserEyebrow")}
             </p>
-            <h2 className="type-section text-midnight mt-3">
+            <h2 className="type-section mt-3 text-midnight">
               {t("teaserTitle")}
             </h2>
           </div>
@@ -30,31 +40,11 @@ export function NewsTeaser() {
             {t("teaserViewAll")} →
           </Link>
         </div>
-
-        <ul className="grid gap-px mt-16 md:grid-cols-3 bg-[var(--color-border)] border border-[var(--color-border)] rounded-[12px] overflow-hidden">
-          {KEYS.map((key) => (
-            <li key={key} className="bg-surface flex flex-col p-8">
-              <div className="flex items-center gap-3 type-caption text-muted">
-                <span>{t(`items.${key}.date`)}</span>
-                <span aria-hidden className="size-1 rounded-full bg-[var(--color-border-strong)]" />
-                <span>{t(`items.${key}.category`)}</span>
-              </div>
-              <h3 className="text-midnight mt-5 text-[20px] leading-[1.25] tracking-[-0.3px] font-semibold">
-                {t(`items.${key}.title`)}
-              </h3>
-              <p className="type-body text-muted mt-3 flex-1">
-                {t(`items.${key}.excerpt`)}
-              </p>
-              <Link
-                href="/actualites"
-                className="type-caption font-medium text-accent mt-6 hover:underline"
-              >
-                {t("readMore")} →
-              </Link>
-            </li>
-          ))}
-        </ul>
       </Container>
+
+      <div className="mt-16">
+        <InfiniteMovingCards items={items} direction="left" speed="slow" />
+      </div>
     </section>
   );
 }

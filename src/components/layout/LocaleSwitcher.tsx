@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import { useTransition } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 export function LocaleSwitcher() {
   const locale = useLocale();

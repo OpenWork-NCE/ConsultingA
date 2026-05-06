@@ -65,6 +65,35 @@
   --shadow-focus: rgba(0, 0, 0, 0.4) 0px 4px 12px;
 }
 
+/*
+ * Aceternity / shadcn-style aliases — many copy-pasted UI snippets reference
+ * the unprefixed `--background`, `--foreground`, `--card`, `--ring`, etc.
+ * tokens. We forward them to our semantic palette so they inherit the
+ * DESIGN.md theme automatically (and flip with the `.dark` class).
+ */
+:where(:root) {
+  --background: var(--color-background);
+  --foreground: var(--color-foreground);
+  --card: var(--color-surface-strong);
+  --card-foreground: var(--color-foreground);
+  --popover: var(--color-surface-strong);
+  --popover-foreground: var(--color-foreground);
+  --primary: var(--color-midnight);
+  --primary-foreground: var(--color-paper);
+  --secondary: var(--color-surface);
+  --secondary-foreground: var(--color-foreground);
+  --muted: var(--color-surface);
+  --muted-foreground: var(--color-muted);
+  --accent: var(--color-accent);
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-accent);
+  --radius: 12px;
+}
+
 html,
 body {
   background: var(--color-background);
@@ -135,6 +164,46 @@ body {
     font-size: 26px;
     letter-spacing: -0.6px;
   }
+}
+
+/* Bento decorative shine — sweeps a subtle highlight across a dark header. */
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/*
+ * Aceternity Infinite Moving Cards — duplicates the lane and scrolls forever.
+ * Pause on hover is wired via the `[animation-play-state:paused]` Tailwind
+ * arbitrary variant on the consumer.
+ */
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+}
+
+/* Aceternity Spotlight — fades + drifts the hero atmosphere on first paint. */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+.animate-spotlight {
+  animation: spotlight 2s ease 0.6s 1 forwards;
 }
 
 :where(a, button, [role="button"], input, textarea, select):focus-visible {

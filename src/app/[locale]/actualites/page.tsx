@@ -3,6 +3,8 @@ import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { TracingBeam } from "@/components/aceternity/tracing-beam";
+import { CardSpotlight } from "@/components/aceternity/card-spotlight";
 
 const KEYS = [
   "obligations-fiscales-2026",
@@ -33,32 +35,35 @@ function ActualitesContent() {
 
       <section className="py-20 md:py-28">
         <Container>
-          <ul className="divide-y divide-[var(--color-border)] border-t border-b border-[var(--color-border)]">
-            {KEYS.map((key) => (
-              <li
-                key={key}
-                className="grid gap-6 md:grid-cols-[200px_1fr] py-10"
-              >
-                <div className="type-caption text-muted">
-                  <div className="font-semibold text-midnight uppercase tracking-wide">
-                    {t(`items.${key}.category`)}
+          <TracingBeam>
+            <div className="space-y-10 pl-4 md:pl-12">
+              {KEYS.map((key) => (
+                <CardSpotlight key={key} className="p-8 md:p-10">
+                  <div className="flex flex-col">
+                    <div className="flex flex-wrap items-center gap-3 type-caption text-muted">
+                      <span className="font-semibold uppercase tracking-wide text-midnight">
+                        {t(`items.${key}.category`)}
+                      </span>
+                      <span
+                        aria-hidden
+                        className="size-1 rounded-full bg-[var(--color-border-strong)]"
+                      />
+                      <span>{t(`items.${key}.date`)}</span>
+                    </div>
+                    <h2 className="mt-4 text-[26px] font-semibold leading-[1.2] tracking-[-0.5px] text-midnight">
+                      {t(`items.${key}.title`)}
+                    </h2>
+                    <p className="type-body mt-4 max-w-2xl text-midnight/82">
+                      {t(`items.${key}.excerpt`)}
+                    </p>
+                    <span className="mt-6 inline-block type-caption font-medium text-accent">
+                      {t("readMore")} →
+                    </span>
                   </div>
-                  <div className="mt-1">{t(`items.${key}.date`)}</div>
-                </div>
-                <div>
-                  <h2 className="text-midnight text-[26px] leading-[1.2] tracking-[-0.5px] font-semibold">
-                    {t(`items.${key}.title`)}
-                  </h2>
-                  <p className="type-body text-midnight/82 mt-4 max-w-2xl">
-                    {t(`items.${key}.excerpt`)}
-                  </p>
-                  <span className="inline-block type-caption font-medium text-accent mt-6">
-                    {t("readMore")} →
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ul>
+                </CardSpotlight>
+              ))}
+            </div>
+          </TracingBeam>
         </Container>
       </section>
 
