@@ -50,15 +50,15 @@ export function About() {
             <p className="type-body-lg mt-6 text-midnight/82">{t("body")}</p>
           </div>
 
-          {/* Editorial image — Málaga skyline overlay, anchors the cabinet
-              to its location without crowding the typography column. */}
+          {/* Editorial image — institutional entrance hall, anchors the
+              cabinet's premium, architectural identity in Andalusia. */}
           <div className="relative aspect-[5/4] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] lg:aspect-[5/4]">
             <Image
-              src="/assets/Image_Site_2.jpg"
+              src="/assets/authentic_images/Image_2.jpg"
               alt=""
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
             <div
               aria-hidden

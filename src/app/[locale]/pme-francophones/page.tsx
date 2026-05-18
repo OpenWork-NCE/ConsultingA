@@ -80,20 +80,38 @@ function PmeContent() {
       <section className="py-20 md:py-28">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
-            {/* Editorial image — Spanish-flag-bearing professionals,
-                signals the FR-ES bridge that defines this practice. */}
-            <div className="relative aspect-[5/4] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] lg:order-1">
-              <Image
-                src="/assets/Image_Site_5.jpg"
-                alt=""
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-gradient-to-tl from-midnight/30 via-transparent to-transparent"
-              />
+            {/* Editorial mosaic — the wider photo carries the human warmth
+                of the practice (two principals at ease), and the portrait
+                accent codes rigour & dress-code. Together they read as
+                "cabinet à taille humaine + standards de cabinet de premier
+                plan". On mobile the portrait drops below the main shot. */}
+            <div className="grid grid-cols-5 gap-3 sm:gap-4 lg:order-1">
+              <div className="relative col-span-5 aspect-[5/4] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] sm:col-span-3 sm:aspect-[5/4]">
+                <Image
+                  src="/assets/authentic_images/Image_5.jpg"
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 36vw, 100vw"
+                  className="object-cover object-center"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-tl from-midnight/30 via-transparent to-transparent"
+                />
+              </div>
+              <div className="relative col-span-5 aspect-[4/5] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] sm:col-span-2 sm:aspect-auto">
+                <Image
+                  src="/assets/authentic_images/Image_3.jpg"
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 20vw, (min-width: 640px) 24vw, 100vw"
+                  className="object-cover object-center"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-tr from-midnight/30 via-transparent to-transparent"
+                />
+              </div>
             </div>
 
             <div className="lg:order-0 max-w-2xl">

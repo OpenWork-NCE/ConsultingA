@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { ComponentType } from "react";
 import { Container } from "@/components/ui/Container";
@@ -42,7 +43,24 @@ export function ExpertisesTeaser() {
           </Link>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {/* Editorial banner — open workspace evokes the pluridisciplinary
+            team behind the four expertise pillars. Crops 16:6 on desktop,
+            tightens to 16:9 on mobile so the framing stays legible. */}
+        <div className="relative mt-12 aspect-[16/9] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] md:mt-14 md:aspect-[16/6]">
+          <Image
+            src="/assets/authentic_images/Image_1.jpg"
+            alt=""
+            fill
+            sizes="(min-width: 1280px) 1200px, 100vw"
+            className="object-cover object-center"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-r from-midnight/40 via-midnight/10 to-transparent"
+          />
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4 md:mt-12">
           {EXPERTISES.map(({ key, icon: Icon }, index) => (
             <GlareCard
               key={key}

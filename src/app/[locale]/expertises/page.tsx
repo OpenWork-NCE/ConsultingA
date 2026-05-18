@@ -45,22 +45,22 @@ function ExpertisesContent() {
         imageSrc="/assets/Image_Site_1.jpg"
       />
 
-      {/* Editorial visual — pluridisciplinary team, signals the
-          "savoir-faire multidisciplinaire" promise of the page. */}
+      {/* Editorial visual — close-up of a signature on a deal document,
+          signals the contractual, juridical weight of every engagement. */}
       <section className="pt-12 md:pt-16">
         <Container>
-          <div className="relative aspect-[16/7] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] sm:aspect-[16/6] md:aspect-[16/5]">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] sm:aspect-[16/7] md:aspect-[16/6]">
             <Image
-              src="/assets/Image_Site_4.jpg"
+              src="/assets/authentic_images/Image_4.jpg"
               alt=""
               fill
               sizes="(min-width: 1280px) 1200px, 100vw"
-              className="object-cover"
+              className="object-cover object-center"
               priority
             />
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-r from-midnight/40 via-midnight/10 to-transparent"
+              className="absolute inset-0 bg-gradient-to-r from-midnight/50 via-midnight/15 to-transparent"
             />
           </div>
         </Container>

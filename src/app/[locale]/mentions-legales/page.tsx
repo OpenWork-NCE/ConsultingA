@@ -52,19 +52,20 @@ function LegalContent() {
 
             <div className="space-y-4">
               {SECTION_KEYS.map(({ key, id }) => (
-                <CardSpotlight
-                  key={key}
-                  className="scroll-mt-24 p-8 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]"
-                >
-                  <article id={id}>
-                    <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.4px] text-midnight">
-                      {t(`sections.${key}.title`)}
-                    </h2>
-                    <p className="type-body mt-4 max-w-2xl text-midnight/82">
-                      {t(`sections.${key}.body`)}
-                    </p>
-                  </article>
-                </CardSpotlight>
+                // scroll-mt-24 sits on the same element as the id so deep
+                // links from the footer/sidebar clear the sticky header.
+                <section key={key} id={id} className="scroll-mt-24">
+                  <CardSpotlight className="p-8 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]">
+                    <article>
+                      <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.4px] text-midnight">
+                        {t(`sections.${key}.title`)}
+                      </h2>
+                      <p className="type-body mt-4 max-w-2xl text-midnight/82">
+                        {t(`sections.${key}.body`)}
+                      </p>
+                    </article>
+                  </CardSpotlight>
+                </section>
               ))}
             </div>
           </div>

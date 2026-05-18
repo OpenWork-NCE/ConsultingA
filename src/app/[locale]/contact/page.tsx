@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
@@ -49,41 +50,63 @@ function ContactContent() {
         eyebrow={t("pageEyebrow")}
         title={t("pageTitle")}
         subtitle={t("pageSubtitle")}
-        imageSrc="/assets/Image_Site_5.jpg"
+        imageSrc="/assets/authentic_images/Image_7.jpg"
       />
 
       <section className="py-20 md:py-28">
         <Container>
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
-            {FIELDS.map(({ key, icon: Icon, href }) => (
-              <ContactCell
-                key={key}
-                icon={<Icon className="size-5" strokeWidth={1.5} />}
-                label={t(`${key}.label`)}
-                value={
-                  key === "address"
-                    ? renderAddressLines(t.raw("address.lines") as string[])
-                    : t(`${key}.value`)
-                }
-                rawValue={key === "address" ? undefined : t(`${key}.value`)}
-                note={t(`${key}.note`)}
-                href={
-                  href && key !== "address" ? href(t(`${key}.value`)) : undefined
-                }
+          {/* Two-column editorial layout — at lg+ a tall portrait sits on
+              the left (palette-aligned blue/gold triptych) and the contact
+              cards flow on the right. Below lg the portrait stacks above
+              the cards in a slightly wider 3/4 frame. */}
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.2fr)] lg:items-start lg:gap-12">
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[16px] border border-[var(--color-border)] bg-surface shadow-[var(--shadow-md)] lg:mx-0 lg:aspect-[4/5] lg:max-w-none">
+              <Image
+                src="/assets/authentic_images/Image_6.jpg"
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 32vw, (min-width: 640px) 384px, 100vw"
+                className="object-cover object-center"
               />
-            ))}
-          </ul>
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-tr from-midnight/35 via-transparent to-transparent"
+              />
+            </div>
 
-          {/* Reassurance row — languages spoken + response SLA. */}
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
-            <ReassuranceCell
-              label={t("languagesLabel")}
-              value={t("languages")}
-            />
-            <ReassuranceCell
-              label={t("responseLabel")}
-              value={t("response")}
-            />
+            <div>
+              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3 xl:gap-6">
+                {FIELDS.map(({ key, icon: Icon, href }) => (
+                  <ContactCell
+                    key={key}
+                    icon={<Icon className="size-5" strokeWidth={1.5} />}
+                    label={t(`${key}.label`)}
+                    value={
+                      key === "address"
+                        ? renderAddressLines(t.raw("address.lines") as string[])
+                        : t(`${key}.value`)
+                    }
+                    rawValue={key === "address" ? undefined : t(`${key}.value`)}
+                    note={t(`${key}.note`)}
+                    href={
+                      href && key !== "address" ? href(t(`${key}.value`)) : undefined
+                    }
+                  />
+                ))}
+              </ul>
+
+              {/* Reassurance row — languages spoken + response SLA. */}
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                <ReassuranceCell
+                  label={t("languagesLabel")}
+                  value={t("languages")}
+                />
+                <ReassuranceCell
+                  label={t("responseLabel")}
+                  value={t("response")}
+                />
+              </div>
+            </div>
           </div>
         </Container>
       </section>
