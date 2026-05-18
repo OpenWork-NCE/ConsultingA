@@ -11,6 +11,7 @@ type LinkButtonProps = {
   size?: Size;
   className?: string;
   children: React.ReactNode;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 const base =
@@ -38,10 +39,12 @@ export function LinkButton({
   size = "md",
   className,
   children,
+  onClick,
 }: LinkButtonProps) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={cn(base, variants[variant], sizes[size], className)}
     >
       {children}
