@@ -54,7 +54,7 @@ export function Footer() {
           <p className="type-body text-muted mt-5 max-w-xs">{t("tagline")}</p>
           <ul className="type-caption text-muted mt-6 space-y-1">
             <li>{t("address")}</li>
-            <li>{t("phone")}</li>
+            {/* <li>{t("phone")}</li> */}
             <li>
               <a href={`mailto:${t("email")}`} className="hover:text-midnight">
                 {t("email")}
