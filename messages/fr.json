@@ -28,10 +28,9 @@
   },
   "Stats": {
     "items": {
-      "experience": { "value": "15+", "label": "Années d'expérience" },
-      "clients": { "value": "200+", "label": "Clients accompagnés" },
-      "jurisdictions": { "value": "3", "label": "Juridictions couvertes" },
-      "satisfaction": { "value": "98 %", "label": "Taux de satisfaction" }
+      "experience": { "value": "30+", "label": "Années d'expérience" },
+      "clients": { "value": "4000+", "label": "Clients accompagnés" },
+      "satisfaction": { "value": "100 %", "label": "Taux de satisfaction" }
     }
   },
   "About": {

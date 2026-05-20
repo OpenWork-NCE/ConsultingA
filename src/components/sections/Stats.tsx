@@ -4,7 +4,7 @@ import { CardSpotlight } from "@/components/aceternity/card-spotlight";
 import { NumberTicker } from "@/components/aceternity/number-ticker";
 import { parseStat } from "@/components/aceternity/parse-stat";
 
-const KEYS = ["experience", "clients", "jurisdictions", "satisfaction"] as const;
+const KEYS = ["experience", "clients", "satisfaction"] as const;
 
 export function Stats() {
   const t = useTranslations("Stats");
@@ -13,7 +13,7 @@ export function Stats() {
 
   return (
     <section className="relative isolate bg-surface-soft py-16 md:py-20">
-      <Container className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <Container className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {KEYS.map((key) => {
           const raw = t(`items.${key}.value`);
           const parsed = parseStat(raw);
