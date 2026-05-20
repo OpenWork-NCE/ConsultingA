@@ -309,7 +309,7 @@
     },
     "email": {
       "label": "Email",
-      "value": "administracion@consultingadm.com",
+      "value": "contact@cabinetexpertisecomptable.com",
       "note": "Réponse sous un jour ouvré"
     },
     "address": {
@@ -335,7 +335,7 @@
     "sections": {
       "editor": {
         "title": "Éditeur du site",
-        "body": "Le présent site est édité par le Cabinet d'Expertise-Comptable, dont le siège est situé à Málaga, Andalousie, Espagne. Pour toute question relative au présent site, vous pouvez nous joindre à l'adresse administracion@consultingadm.com."
+        "body": "Le présent site est édité par le Cabinet d'Expertise-Comptable, dont le siège est situé à Málaga, Andalousie, Espagne. Pour toute question relative au présent site, vous pouvez nous joindre à l'adresse contact@cabinetexpertisecomptable.com."
       },
       "host": {
         "title": "Hébergement",
@@ -347,7 +347,7 @@
       },
       "data": {
         "title": "Données personnelles",
-        "body": "Les données collectées via les formulaires de contact sont traitées dans le strict respect du Règlement (UE) 2016/679 (RGPD). Conformément à la réglementation, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition que vous pouvez exercer à l'adresse administracion@consultingadm.com."
+        "body": "Les données collectées via les formulaires de contact sont traitées dans le strict respect du Règlement (UE) 2016/679 (RGPD). Conformément à la réglementation, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition que vous pouvez exercer à l'adresse contact@cabinetexpertisecomptable.com."
       },
       "cookies": {
         "title": "Cookies",
@@ -363,7 +363,7 @@
     "tagline": "Cabinet d'expertise-comptable & conseil juridique au service d'une clientèle exigeante en Andalousie.",
     "address": "Andalousie, Espagne",
     "phone": "+34 675 578 892",
-    "email": "administracion@consultingadm.com",
+    "email": "contact@cabinetexpertisecomptable.com",
     "columns": {
       "expertises": {
         "title": "Expertises",

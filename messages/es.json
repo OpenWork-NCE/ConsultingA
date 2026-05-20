@@ -309,7 +309,7 @@
     },
     "email": {
       "label": "Correo electrónico",
-      "value": "administracion@consultingadm.com",
+      "value": "contact@cabinetexpertisecomptable.com",
       "note": "Respuesta en un día hábil"
     },
     "address": {
@@ -335,7 +335,7 @@
     "sections": {
       "editor": {
         "title": "Editor del sitio",
-        "body": "El presente sitio es editado por el Despacho de Asesoría Contable, con sede en Málaga, Andalucía, España. Para cualquier cuestión relativa a este sitio, puede contactarnos en administracion@consultingadm.com."
+        "body": "El presente sitio es editado por el Despacho de Asesoría Contable, con sede en Málaga, Andalucía, España. Para cualquier cuestión relativa a este sitio, puede contactarnos en contact@cabinetexpertisecomptable.com"
       },
       "host": {
         "title": "Alojamiento",
@@ -347,7 +347,7 @@
       },
       "data": {
         "title": "Datos personales",
-        "body": "Los datos recogidos a través de los formularios de contacto se tratan en estricto cumplimiento del Reglamento (UE) 2016/679 (RGPD). Conforme a la normativa, dispone de un derecho de acceso, rectificación, supresión y oposición que puede ejercer en administracion@consultingadm.com."
+        "body": "Los datos recogidos a través de los formularios de contacto se tratan en estricto cumplimiento del Reglamento (UE) 2016/679 (RGPD). Conforme a la normativa, dispone de un derecho de acceso, rectificación, supresión y oposición que puede ejercer en contact@cabinetexpertisecomptable.com."
       },
       "cookies": {
         "title": "Cookies",
@@ -363,7 +363,7 @@
     "tagline": "Despacho de expertos contables y asesoría jurídica al servicio de una clientela exigente en Andalucía.",
     "address": "Andalucía, España",
     "phone": "+34 675 578 892",
-    "email": "administracion@consultingadm.com",
+    "email": "contact@cabinetexpertisecomptable.com",
     "columns": {
       "expertises": {
         "title": "Áreas",
