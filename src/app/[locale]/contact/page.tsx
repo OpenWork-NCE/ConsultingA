@@ -15,11 +15,11 @@ const FIELDS: {
   icon: LucideIcon;
   href?: (value: string) => string;
 }[] = [
-  {
-    key: "phone",
-    icon: Phone,
-    href: (value) => `tel:${value.replace(/\s+/g, "")}`,
-  },
+  // {
+  //   key: "phone",
+  //   icon: Phone,
+  //   href: (value) => `tel:${value.replace(/\s+/g, "")}`,
+  // },
   {
     key: "email",
     icon: Mail,
@@ -75,7 +75,7 @@ function ContactContent() {
             </div>
 
             <div>
-              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3 xl:gap-6">
+              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-2 xl:gap-6">
                 {FIELDS.map(({ key, icon: Icon, href }) => (
                   <ContactCell
                     key={key}

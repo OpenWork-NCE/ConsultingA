@@ -85,7 +85,11 @@ export function Footer() {
       <div className="border-t border-[var(--color-border)]">
         <Container className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <p className="type-caption text-muted">{t("copyright")}</p>
-          <p className="type-caption text-muted font-medium">{t("credit")}</p>
+          <p className="type-caption text-muted font-medium">
+            <a href="https://www.dataintelligenceconsulting.com/" target="_blank" rel="noopener noreferrer" className="hover:text-midnight">
+              {t("credit")}
+            </a>
+          </p>
         </Container>
       </div>
     </footer>

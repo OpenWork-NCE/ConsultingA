@@ -6,7 +6,7 @@ import { CardSpotlight } from "@/components/aceternity/card-spotlight";
 
 const SECTION_KEYS = [
   { key: "editor", id: "editeur" },
-  { key: "host", id: "hebergement" },
+  // { key: "host", id: "hebergement" },
   { key: "ip", id: "propriete-intellectuelle" },
   { key: "data", id: "donnees-personnelles" },
   { key: "cookies", id: "cookies" },

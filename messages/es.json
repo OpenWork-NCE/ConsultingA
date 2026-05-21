@@ -314,7 +314,7 @@
     },
     "address": {
       "label": "Dirección",
-      "lines": ["Málaga", "Andalucía, España"],
+      "lines": ["Andalucía, España"],
       "note": "Sólo con cita previa"
     },
     "languagesLabel": "Idiomas de trabajo",
