@@ -301,16 +301,16 @@
   "Contact": {
     "pageEyebrow": "Contacto",
     "pageTitle": "Hablemos de su expediente con total confidencialidad.",
-    "pageSubtitle": "Una primera conversación permite delimitar su necesidad y orientarle hacia la mejor forma de gestionarla. Nuestro equipo responde en un día hábil.",
+    "pageSubtitle": "Una primera conversación permite delimitar su necesidad y orientarle hacia la mejor forma de gestionarla.",
     "phone": {
-      "label": "Teléfono",
-      "value": "+34 675 578 892",
-      "note": "Lunes a viernes · 9h–18h"
+      "label": "WhatsApp",
+      "value": "+237675578872",
+      "note": "Contacto directo por WhatsApp"
     },
     "email": {
       "label": "Correo electrónico",
       "value": "contact@cabinetexpertisecomptable.com",
-      "note": "Respuesta en un día hábil"
+      "note": "Escríbanos a esta dirección"
     },
     "address": {
       "label": "Dirección",
@@ -318,9 +318,7 @@
       "note": "Sólo con cita previa"
     },
     "languagesLabel": "Idiomas de trabajo",
-    "languages": "Français · Español · English",
-    "responseLabel": "Plazo de respuesta",
-    "response": "En un día hábil"
+    "languages": "Français · Español · English"
   },
   "ContactCTA": {
     "title": "Hablemos de su expediente con total confidencialidad.",

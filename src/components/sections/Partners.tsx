@@ -11,6 +11,12 @@ const PARTNERS = [
       "/assets/logos-of-partners/Escudo_de_Andalucía_tribunal_Málaga et C.png",
   },
   {
+    id: "gobierno",
+    name: "Gobierno de España",
+    designation: "Ministerio de la Presidencia",
+    image: "/assets/logos-of-partners/gobierno-de-espana.png",
+  },
+  {
     id: "caixabank",
     name: "CaixaBank",
     designation: "Andalucía",
@@ -61,7 +67,7 @@ export function Partners() {
           <p className="type-body-lg mt-5 text-midnight/82">{t("subtitle")}</p>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 items-center gap-x-6 gap-y-2 sm:grid-cols-3 lg:grid-cols-7">
+        <div className="mt-16 grid grid-cols-2 items-center gap-x-6 gap-y-2 sm:grid-cols-4 lg:grid-cols-4">
           <AnimatedTooltip items={PARTNERS} />
         </div>
       </Container>

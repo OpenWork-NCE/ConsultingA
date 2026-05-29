@@ -15,11 +15,11 @@ const FIELDS: {
   icon: LucideIcon;
   href?: (value: string) => string;
 }[] = [
-  // {
-  //   key: "phone",
-  //   icon: Phone,
-  //   href: (value) => `tel:${value.replace(/\s+/g, "")}`,
-  // },
+  {
+    key: "phone",
+    icon: Phone,
+    href: (value) => `https://wa.me/${value.replace(/\D+/g, "")}`,
+  },
   {
     key: "email",
     icon: Mail,
@@ -95,15 +95,11 @@ function ContactContent() {
                 ))}
               </ul>
 
-              {/* Reassurance row — languages spoken + response SLA. */}
-              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+              {/* Reassurance row — languages spoken. */}
+              <div className="mt-10 grid gap-4 sm:grid-cols-1">
                 <ReassuranceCell
                   label={t("languagesLabel")}
                   value={t("languages")}
-                />
-                <ReassuranceCell
-                  label={t("responseLabel")}
-                  value={t("response")}
                 />
               </div>
             </div>
